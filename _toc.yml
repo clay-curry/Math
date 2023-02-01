@@ -1,0 +1,29 @@
+# Table of contents
+# Learn more at https://jupyterbook.org/customize/toc.html
+
+format: jb-book
+root: index
+options:  # The options key will be applied to all chapters, but not sub-sections
+  numbered: True
+parts:
+- caption: Algebra
+  chapters:
+  - file: 01_algebra/01_symmetry
+  - file: 01_algebra/02_linear_maps
+  - file: 01_algebra/03_eigensubspaces
+  - file: 01_algebra/04_representations
+  - file: 01_algebra/05_inner_product_spaces
+  - file: 01_algebra/06_topological_spaces
+  - file: 01_algebra/07_fourier_analysis
+  - file: 01_algebra/08_probability
+  - file: 01_algebra/exercises
+- caption: Deep Learning
+  chapters:
+  - file: 02_deep_learning/01_learning_theory
+  - file: 02_deep_learning/02_neural_networks
+  - file: 02_deep_learning/03_neuroevolution
+  - file: 02_deep_learning/04_universal_approximation
+  - file: 02_deep_learning/05_equivariant_neural_networks
+  - file: 02_deep_learning/06_unsupervised_learning
+  - file: 02_deep_learning/07_explainability
+  
