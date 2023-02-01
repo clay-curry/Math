@@ -5,7 +5,7 @@ The mathematical group and group theory are a pillar of modern mathematics and p
 <div style="text-align:center;"><b>groups</b> encapsulate the <b>algebraic structure</b> underlying all <b>symmetries</b>.</div>
 <br>
 
-This section motivates the study of groups by revisiting notions of sets, operations on sets, relations between sets, and equivalence relations.
+This section motivates the study of groups by revisiting notions of sets, operations on sets, relations between sets, and equivalence relations...
 
 ## Sets
 
