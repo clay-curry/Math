@@ -1,4 +1,4 @@
-# Probablity
+# Probability
 
 ## Real Analysis
 

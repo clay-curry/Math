@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Universal Approximation &#8212; At the Inteface of Applied Mathematics and Neural Networks</title>
+    <title>Learning Theory &#8212; At the Inteface of Applied Mathematics and Neural Networks</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -51,12 +51,10 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
-    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
-    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Equivariant Neural Networks" href="05_equivariant_neural_networks.html" />
-    <link rel="prev" title="Neuroevolution" href="03_neuroevolution.html" />
+    <link rel="next" title="Neural Networks" href="neural_networks.html" />
+    <link rel="prev" title="Exercises" href="../algebra/exercises.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -112,7 +110,7 @@ const thebe_selector_output = ".output, .cell_output"
         <ul class="nav bd-sidenav bd-sidenav__home-link">
             <li class="toctree-l1">
                 <a class="reference internal" href="../index.html">
-                    Introduction
+                    Forward
                 </a>
             </li>
         </ul>
@@ -123,47 +121,52 @@ const thebe_selector_output = ".output, .cell_output"
 </p>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="../01_algebra/01_symmetry.html">
+  <a class="reference internal" href="../algebra/symmetry.html">
    Symmetry
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../01_algebra/02_linear_maps.html">
+  <a class="reference internal" href="../algebra/linear_maps.html">
    Linear Maps
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../01_algebra/03_eigensubspaces.html">
-   Eigensubspaces
+  <a class="reference internal" href="../algebra/representations.html">
+   Linear Representations
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../01_algebra/04_representations.html">
-   Representations
+  <a class="reference internal" href="../algebra/product_quotient_spaces.html">
+   Product &amp; Quotient Spaces
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../01_algebra/05_inner_product_spaces.html">
+  <a class="reference internal" href="../algebra/invariant_subspaces.html">
+   Invariant Subspaces
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../algebra/inner_product_spaces.html">
    Inner Product Spaces
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../01_algebra/06_topological_spaces.html">
+  <a class="reference internal" href="../algebra/topological_spaces.html">
    Topological Spaces
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../01_algebra/07_fourier_analysis.html">
+  <a class="reference internal" href="../algebra/fourier_analysis.html">
    Fourier Analysis
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../01_algebra/08_probability.html">
-   Probablity
+  <a class="reference internal" href="../algebra/probability.html">
+   Probability
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../01_algebra/exercises.html">
+  <a class="reference internal" href="../algebra/exercises.html">
    Exercises
   </a>
  </li>
@@ -174,38 +177,38 @@ const thebe_selector_output = ".output, .cell_output"
  </span>
 </p>
 <ul class="current nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="01_learning_theory.html">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
    Learning Theory
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="02_neural_networks.html">
+  <a class="reference internal" href="neural_networks.html">
    Neural Networks
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="03_neuroevolution.html">
+  <a class="reference internal" href="neuroevolution.html">
    Neuroevolution
   </a>
  </li>
- <li class="toctree-l1 current active">
-  <a class="current reference internal" href="#">
+ <li class="toctree-l1">
+  <a class="reference internal" href="universal_approximation.html">
    Universal Approximation
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="05_equivariant_neural_networks.html">
+  <a class="reference internal" href="equivariant_neural_networks.html">
    Equivariant Neural Networks
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="06_unsupervised_learning.html">
+  <a class="reference internal" href="unsupervised_learning.html">
    Learning without a Teacher
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="07_explainability.html">
+  <a class="reference internal" href="explainability.html">
    The Difficult Problem
   </a>
  </li>
@@ -282,7 +285,7 @@ title="Fullscreen mode"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="../_sources/02_deep_learning/04_universal_approximation.md"
+        <a href="../_sources/learning/learning_theory.md"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -342,27 +345,28 @@ title="Print to PDF"
     <nav id="bd-toc-nav" aria-label="Page">
         <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#dense-borel-sigma-fields">
-   Dense Borel
-   <span class="math notranslate nohighlight">
-    \(\sigma\)
-   </span>
-   -Fields
+  <a class="reference internal nav-link" href="#hume-s-problem-of-induction">
+   Hume’s Problem of Induction
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#uniformly-compact-spaces">
-   Uniformly Compact Spaces
+  <a class="reference internal nav-link" href="#regression">
+   Regression
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#boolean-functions">
-   Boolean Functions
+  <a class="reference internal nav-link" href="#classification">
+   Classification
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#id1">
-   Universal approximation
+  <a class="reference internal nav-link" href="#decomposition-of-error">
+   Decomposition of Error
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#energy-based-learning">
+   Energy Based Learning
   </a>
  </li>
 </ul>
@@ -374,7 +378,7 @@ title="Print to PDF"
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Universal Approximation</h1>
+                <h1>Learning Theory</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -385,27 +389,28 @@ title="Print to PDF"
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#dense-borel-sigma-fields">
-   Dense Borel
-   <span class="math notranslate nohighlight">
-    \(\sigma\)
-   </span>
-   -Fields
+  <a class="reference internal nav-link" href="#hume-s-problem-of-induction">
+   Hume’s Problem of Induction
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#uniformly-compact-spaces">
-   Uniformly Compact Spaces
+  <a class="reference internal nav-link" href="#regression">
+   Regression
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#boolean-functions">
-   Boolean Functions
+  <a class="reference internal nav-link" href="#classification">
+   Classification
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#id1">
-   Universal approximation
+  <a class="reference internal nav-link" href="#decomposition-of-error">
+   Decomposition of Error
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#energy-based-learning">
+   Energy Based Learning
   </a>
  </li>
 </ul>
@@ -418,19 +423,22 @@ title="Print to PDF"
                 
               <div>
                 
-  <section class="tex2jax_ignore mathjax_ignore" id="universal-approximation">
-<h1>Universal Approximation<a class="headerlink" href="#universal-approximation" title="Permalink to this headline">#</a></h1>
-<section id="dense-borel-sigma-fields">
-<h2>Dense Borel <span class="math notranslate nohighlight">\(\sigma\)</span>-Fields<a class="headerlink" href="#dense-borel-sigma-fields" title="Permalink to this headline">#</a></h2>
+  <section class="tex2jax_ignore mathjax_ignore" id="learning-theory">
+<h1>Learning Theory<a class="headerlink" href="#learning-theory" title="Permalink to this headline">#</a></h1>
+<section id="hume-s-problem-of-induction">
+<h2>Hume’s Problem of Induction<a class="headerlink" href="#hume-s-problem-of-induction" title="Permalink to this headline">#</a></h2>
 </section>
-<section id="uniformly-compact-spaces">
-<h2>Uniformly Compact Spaces<a class="headerlink" href="#uniformly-compact-spaces" title="Permalink to this headline">#</a></h2>
+<section id="regression">
+<h2>Regression<a class="headerlink" href="#regression" title="Permalink to this headline">#</a></h2>
 </section>
-<section id="boolean-functions">
-<h2>Boolean Functions<a class="headerlink" href="#boolean-functions" title="Permalink to this headline">#</a></h2>
+<section id="classification">
+<h2>Classification<a class="headerlink" href="#classification" title="Permalink to this headline">#</a></h2>
 </section>
-<section id="id1">
-<h2>Universal approximation<a class="headerlink" href="#id1" title="Permalink to this headline">#</a></h2>
+<section id="decomposition-of-error">
+<h2>Decomposition of Error<a class="headerlink" href="#decomposition-of-error" title="Permalink to this headline">#</a></h2>
+</section>
+<section id="energy-based-learning">
+<h2>Energy Based Learning<a class="headerlink" href="#energy-based-learning" title="Permalink to this headline">#</a></h2>
 </section>
 </section>
 
@@ -447,7 +455,7 @@ title="Print to PDF"
         },
         kernelOptions: {
             kernelName: "python3",
-            path: "./02_deep_learning"
+            path: "./learning"
         },
         predefinedOutput: true
     }
@@ -461,17 +469,17 @@ title="Print to PDF"
                 
     <!-- Previous / next buttons -->
 <div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="03_neuroevolution.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="../algebra/exercises.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Neuroevolution</p>
+            <p class="prev-next-title">Exercises</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="05_equivariant_neural_networks.html" title="next page">
+    <a class='right-next' id="next-link" href="neural_networks.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Equivariant Neural Networks</p>
+        <p class="prev-next-title">Neural Networks</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>

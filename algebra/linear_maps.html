@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Inner Product Spaces &#8212; At the Inteface of Applied Mathematics and Neural Networks</title>
+    <title>Linear Maps &#8212; At the Inteface of Applied Mathematics and Neural Networks</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -51,10 +51,12 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Topological Spaces" href="06_topological_spaces.html" />
-    <link rel="prev" title="Representations" href="04_representations.html" />
+    <link rel="next" title="Linear Representations" href="representations.html" />
+    <link rel="prev" title="Symmetry" href="symmetry.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -110,7 +112,7 @@ const thebe_selector_output = ".output, .cell_output"
         <ul class="nav bd-sidenav bd-sidenav__home-link">
             <li class="toctree-l1">
                 <a class="reference internal" href="../index.html">
-                    Introduction
+                    Forward
                 </a>
             </li>
         </ul>
@@ -121,43 +123,48 @@ const thebe_selector_output = ".output, .cell_output"
 </p>
 <ul class="current nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="01_symmetry.html">
+  <a class="reference internal" href="symmetry.html">
    Symmetry
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="02_linear_maps.html">
-   Linear Maps
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="03_eigensubspaces.html">
-   Eigensubspaces
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="04_representations.html">
-   Representations
   </a>
  </li>
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
+   Linear Maps
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="representations.html">
+   Linear Representations
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="product_quotient_spaces.html">
+   Product &amp; Quotient Spaces
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="invariant_subspaces.html">
+   Invariant Subspaces
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="inner_product_spaces.html">
    Inner Product Spaces
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="06_topological_spaces.html">
+  <a class="reference internal" href="topological_spaces.html">
    Topological Spaces
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="07_fourier_analysis.html">
+  <a class="reference internal" href="fourier_analysis.html">
    Fourier Analysis
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="08_probability.html">
-   Probablity
+  <a class="reference internal" href="probability.html">
+   Probability
   </a>
  </li>
  <li class="toctree-l1">
@@ -173,37 +180,37 @@ const thebe_selector_output = ".output, .cell_output"
 </p>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="../02_deep_learning/01_learning_theory.html">
+  <a class="reference internal" href="../learning/learning_theory.html">
    Learning Theory
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../02_deep_learning/02_neural_networks.html">
+  <a class="reference internal" href="../learning/neural_networks.html">
    Neural Networks
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../02_deep_learning/03_neuroevolution.html">
+  <a class="reference internal" href="../learning/neuroevolution.html">
    Neuroevolution
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../02_deep_learning/04_universal_approximation.html">
+  <a class="reference internal" href="../learning/universal_approximation.html">
    Universal Approximation
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../02_deep_learning/05_equivariant_neural_networks.html">
+  <a class="reference internal" href="../learning/equivariant_neural_networks.html">
    Equivariant Neural Networks
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../02_deep_learning/06_unsupervised_learning.html">
+  <a class="reference internal" href="../learning/unsupervised_learning.html">
    Learning without a Teacher
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../02_deep_learning/07_explainability.html">
+  <a class="reference internal" href="../learning/explainability.html">
    The Difficult Problem
   </a>
  </li>
@@ -258,6 +265,35 @@ title="Toggle navigation"
         
     </div>
     <div class="header-article__right">
+<div class="menu-dropdown menu-dropdown-launch-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Launch interactive content">
+      <i class="fas fa-rocket"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/algebra/linear_maps.md"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Launch on Binder"
+>
+  
+
+<span class="headerbtn__icon-container">
+  
+    <img src="../_static/images/logo_binder.svg">
+  </span>
+<span class="headerbtn__text-container">Binder</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
 <button onclick="toggleFullScreen()"
   class="headerbtn"
   data-toggle="tooltip"
@@ -280,7 +316,24 @@ title="Fullscreen mode"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="../_sources/01_algebra/05_inner_product_spaces.md"
+        <a href="../_sources/algebra/linear_maps.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download notebook file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-code"></i>
+  </span>
+<span class="headerbtn__text-container">.ipynb</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="../_sources/algebra/linear_maps.md"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -340,8 +393,8 @@ title="Print to PDF"
     <nav id="bd-toc-nav" aria-label="Page">
         <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#inner-products">
-   Inner Products
+  <a class="reference internal nav-link" href="#vector-spaces">
+   Vector Spaces
   </a>
  </li>
 </ul>
@@ -353,7 +406,7 @@ title="Print to PDF"
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Inner Product Spaces</h1>
+                <h1>Linear Maps</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -364,8 +417,8 @@ title="Print to PDF"
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#inner-products">
-   Inner Products
+  <a class="reference internal nav-link" href="#vector-spaces">
+   Vector Spaces
   </a>
  </li>
 </ul>
@@ -378,13 +431,51 @@ title="Print to PDF"
                 
               <div>
                 
-  <section class="tex2jax_ignore mathjax_ignore" id="inner-product-spaces">
-<h1>Inner Product Spaces<a class="headerlink" href="#inner-product-spaces" title="Permalink to this headline">#</a></h1>
-<p>Thus far, we have developed intuition and theorems for understanding the <em>algebraic structure</em> of <em>vector spaces</em> and <em>linear maps</em>. This knowledge will enrich our present discussion, wherein we develop a theory of <em>inner products</em> and <em>inner product spaces</em>. Unlike all previous insight insofar concerned with  <em><strong>algebraic</strong></em> notions, inner products permit us to study <em><strong>geometric</strong></em> notions of vector spaces and linear maps, such as “length,” “projection,” and “orthogonality.”</p>
-<section id="inner-products">
-<h2>Inner Products<a class="headerlink" href="#inner-products" title="Permalink to this headline">#</a></h2>
-<p>Lorem ipsum.</p>
+  <section class="tex2jax_ignore mathjax_ignore" id="linear-maps">
+<h1>Linear Maps<a class="headerlink" href="#linear-maps" title="Permalink to this headline">#</a></h1>
+<p>The central goal of linear algebra is to:</p>
+<ol class="simple">
+<li><p>illustrate, and</p></li>
+<li><p>completely characterize,</p></li>
+</ol>
+<p>all linear maps between arbitrary finite-dimensional vector spaces.</p>
+<p>This section serves to help the reader begin to appreciate the above statement. To start, we will ponder the central object of study in linear algebra, linear maps. Like groups, the theory of linear maps is developed to hold for an entire class of mathematical objects, uncoupled from any particular set of objects or even an a particular definition of addition or scalar multiplication of objects. We start with the following axiomatic definition.</p>
+<div class="proof axiom admonition" id="linear-map">
+<p class="admonition-title"><span class="caption-number">Axiom 1 </span> (Linear Map)</p>
+<section class="axiom-content" id="proof-content">
+<p>The function <span class="math notranslate nohighlight">\(f: V \to W\)</span> is said to <strong>map linearly</strong> from <span class="math notranslate nohighlight">\(V\)</span> to <span class="math notranslate nohighlight">\(W\)</span> when the following two properties are satisfied</p>
+<ol class="simple">
+<li><p>Additivity of <span class="math notranslate nohighlight">\(f\)</span></p></li>
+</ol>
+<div class="math notranslate nohighlight">
+\[
+f(a + b) = f(a) + f(b)
+\]</div>
+<ol class="simple">
+<li><p>Homogeneity of <span class="math notranslate nohighlight">\(f\)</span></p></li>
+</ol>
+<div class="math notranslate nohighlight">
+\[
+f(\lambda a) = \lambda f(a)
+\]</div>
+<p>for any given two elements <span class="math notranslate nohighlight">\(a, b \in V\)</span> and any given scalar <span class="math notranslate nohighlight">\(\lambda \in \mathbb{F}\)</span>.</p>
 </section>
+</div><hr class="docutils" />
+<section id="vector-spaces">
+<h2>Vector Spaces<a class="headerlink" href="#vector-spaces" title="Permalink to this headline">#</a></h2>
+<p>On initial introspection, it is natural, perhaps tempting, to glance over a subtle condition of assumed in the {ref}`defintion of linear map<a class="reference external" href="prf:axiom:linear-map">prf:axiom:linear-map</a>.  Linear maps constitute a class of group morphisms compatible only with vector spaces.</p>
+<div class="proof axiom admonition" id="vector-space">
+<p class="admonition-title"><span class="caption-number">Axiom 2 </span> (Vector Space)</p>
+<section class="axiom-content" id="proof-content">
+<p>A <strong>vector space</strong> is a quadruple <span class="math notranslate nohighlight">\((V, \mathbb{F}, +, \cdot)\)</span> where <span class="math notranslate nohighlight">\(V\)</span> is a set, <span class="math notranslate nohighlight">\(\mathbb{F}\)</span> is a field, <span class="math notranslate nohighlight">\(+: V \times V \to V\)</span> is a composition law colloquially called “addition”, and <span class="math notranslate nohighlight">\(\cdot: \mathbb{F} \times V \to V\)</span> is a scalar multiplication, whose individual definitions come together to satisfy the following properties</p>
+<ol class="simple">
+<li><p><strong>associativity</strong>
+sums remains equal under arbitrary association, i.e.</p></li>
+<li><p>Given any <span class="math notranslate nohighlight">\(a\)</span> belonging to <span class="math notranslate nohighlight">\(V\)</span>, we can find some neutral element <span class="math notranslate nohighlight">\(e_a\)</span> within <span class="math notranslate nohighlight">\(V\)</span> which leaves <span class="math notranslate nohighlight">\(a\)</span> unchanged under addition, that is, <span class="math notranslate nohighlight">\(a\)</span> can decompose as <span class="math notranslate nohighlight">\(a = e_a + a\)</span>,</p></li>
+<li><p>Given any element <span class="math notranslate nohighlight">\(a\)</span> belonging to <span class="math notranslate nohighlight">\(V\)</span>, we can find some annihilator element <span class="math notranslate nohighlight">\(-a\)</span> belonging to <span class="math notranslate nohighlight">\(V\)</span>, which combines with <span class="math notranslate nohighlight">\(a\)</span> under addition to produce a neutral element <span class="math notranslate nohighlight">\(e_{a'}\)</span> in <span class="math notranslate nohighlight">\(V\)</span>, i.e., <span class="math notranslate nohighlight">\(a + (-a) = e_{a'}\)</span>,</p></li>
+</ol>
+</section>
+</div></section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -400,7 +491,7 @@ title="Print to PDF"
         },
         kernelOptions: {
             kernelName: "python3",
-            path: "./01_algebra"
+            path: "./algebra"
         },
         predefinedOutput: true
     }
@@ -414,17 +505,17 @@ title="Print to PDF"
                 
     <!-- Previous / next buttons -->
 <div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="04_representations.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="symmetry.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Representations</p>
+            <p class="prev-next-title">Symmetry</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="06_topological_spaces.html" title="next page">
+    <a class='right-next' id="next-link" href="representations.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Topological Spaces</p>
+        <p class="prev-next-title">Linear Representations</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>
