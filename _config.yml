@@ -1,7 +1,7 @@
 # Book settings
 # Learn more at https://jupyterbook.org/customize/config.html
 
-title                       : "At the Inteface of Applied Mathematics and Neural Networks"
+title                       : "At the Interface of Fourier Analysis and Neural Networks"
 author                      : Clay Curry
 copyright                   : "2023"
 logo                        : assets/logo.png
