@@ -22,7 +22,7 @@ The central goal of linear algebra is to:
 
 all linear maps between arbitrary finite-dimensional vector spaces.
 
-This section serves to help the reader begin to appreciate the above statement. To start, we will ponder the central object of study in linear algebra, linear maps. Like groups, linear maps are developed as an axiomatic theory, where results are guaranteed to hold for an entire class of mathematical objects (in contrast to one particular mathematical object). We start with the following axiomatic definition.
+This section serves to help the reader begin to appreciate the above statement. To start, we will ponder the central object of study in linear algebra, linear maps. Like groups, the theory of linear maps is developed to hold for an entire class of mathematical objects, uncoupled from any particular set of objects or even an a particular definition of addition or scalar multiplication. We start with the following axiomatic definition.
 
 ```{prf:axiom} Linear Map
 :label: linear-map
