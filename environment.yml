@@ -1,7 +1,0 @@
-name: book
-channels:
-  - defaults
-dependencies:
-  - python=3.10
-  - matplotlib
-prefix: /Users/clay/miniconda3/envs/book
