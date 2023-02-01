@@ -1,7 +1,7 @@
 # Book settings
 # Learn more at https://jupyterbook.org/customize/config.html
 
-title                       : "Deep Learning: A Representation Theoreical Perspective"
+title                       : "At the Inteface of Applied Mathematics and Neural Networks"
 author                      : Clay Curry
 copyright                   : "2023"
 logo                        : assets/logo.png

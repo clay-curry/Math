@@ -36,7 +36,7 @@
 # 
 # ## Vector Spaces
 # 
-# On initial introspection, it is natural, perhaps tempting, to glance over a subtle condition of Definition {eq}`linear-map`.  Linear maps constitute a class of group morphisms compatible only with vector spaces.
+# On initial introspection, it is natural, perhaps tempting, to glance over a subtle condition of assumed in the {ref}`defintion of linear map<prf:axiom:linear-map>.  Linear maps constitute a class of group morphisms compatible only with vector spaces.
 # 
 # ```{prf:axiom} Vector Space
 # :label: vector-space
