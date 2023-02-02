@@ -6,24 +6,25 @@ root: index
 options:  # The options key will be applied to all chapters, but not sub-sections
   numbered: True
 parts:
-- caption: Algebra
+- caption: Abstract Algebra
   chapters:
-  - file: algebra/symmetry
-  - file: algebra/linear_maps
-  - file: algebra/representations
-  - file: algebra/product_quotient_spaces
-  - file: algebra/invariant_subspaces
-  - file: algebra/inner_product_spaces
-  - file: algebra/topological_spaces
-  - file: algebra/fourier_analysis
-  - file: algebra/probability
-  - file: algebra/exercises
-- caption: Deep Learning
+  - file: chapters/algebra/symmetry
+  - file: chapters/algebra/linear_maps
+  - file: chapters/algebra/invariant_subspaces
+  - file: chapters/algebra/inner_product_spaces
+  - file: chapters/algebra/product_quotient_spaces
+  - file: chapters/algebra/topological_spaces
+  - file: chapters/algebra/representations
+  - file: chapters/algebra/fourier_analysis
+  - file: chapters/algebra/probability
+  - file: chapters/algebra/exercises
+
+- caption: Artificial Neural Networks
   chapters:
-  - file: learning/learning_theory
-  - file: learning/neural_networks
-  - file: learning/neuroevolution
-  - file: learning/universal_approximation
-  - file: learning/equivariant_neural_networks
-  - file: learning/unsupervised_learning
-  - file: learning/explainability
+  - file: chapters/learning/learning_theory
+  - file: chapters/learning/neural_networks
+  - file: chapters/learning/neuroevolution
+  - file: chapters/learning/universal_approximation
+  - file: chapters/learning/equivariant_neural_networks
+  - file: chapters/learning/unsupervised_learning
+  - file: chapters/learning/explainability

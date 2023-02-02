@@ -1,4 +1,6 @@
-# Probability
+# Probability Distributions
+
+## The Structure of Randomness
 
 ## Real Analysis
 
