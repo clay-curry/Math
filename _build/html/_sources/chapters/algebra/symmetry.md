@@ -8,7 +8,7 @@ This feat is a direct consequence of the following truth:
 <b>groups</b> are a <b>formal language</b> for describing <b>symmetries</b>.</div>
 <br>
 
-In other words, group's describe the "algebraic form" of symmetries, allowing us to better understand the meaning and algebraic structure of symmetries. However, before going forward, our first goal is to understand, precisely, the modern mathematical attempt to understanding the meaning of "symmetry."
+Restated, group's describe the "algebraic form" of symmetries, allowing us to better understand the meaning and algebraic structure of symmetries. However, before going forward, our first goal is to understand, precisely, the modern mathematical attempt to understanding the meaning of "symmetry."
 
 This section motivates the study of groups by revisiting notions of sets, relations, functions, mathematical structure, operations on sets, operators on sets, equivalence relations, and symmetry. The examples provided serve two crucial and equally important,
 
