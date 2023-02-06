@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Symmetry &#8212; Equivariant Deep Learning: Theoretical Documentation</title>
+    <title>Symmetry &#8212; Symmetry, Representations, and Neural Networks</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -100,7 +100,7 @@ const thebe_selector_output = ".output, .cell_output"
       <img src="../../_static/logo.png" class="logo" alt="logo">
       
       
-      <h1 class="site-logo" id="site-title">Equivariant Deep Learning: Theoretical Documentation</h1>
+      <h1 class="site-logo" id="site-title">Symmetry, Representations, and Neural Networks</h1>
       
     </a>
 </div><form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
@@ -352,53 +352,55 @@ title="Print to PDF"
     <nav id="bd-toc-nav" aria-label="Page">
         <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#sets">
-   Sets
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#relations">
-   Relations
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#mathematical-structure">
-   Mathematical Structure
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#equivalence-relations">
-   Equivalence Relations
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#id1">
-   Relations
+   Symmetry
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#sets">
+     Sets
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#relations">
+     Relations
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#mathematical-structure">
+     Mathematical Structure
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#operations-on-sets">
+     Operations on Sets
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#operators">
+     Operators
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#equivalence-relations">
+     Equivalence Relations
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#group-axioms">
+   Group Axioms
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#symetry">
-   Symetry
+  <a class="reference internal nav-link" href="#cosets-normal-subgroups">
+   Cosets &amp; Normal Subgroups
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#groups">
-   Groups
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#cosets-lagranges-theorem">
-   Cosets &amp; Lagranges Theorem
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#normal-subgroups">
-   Normal Subgroups
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#morphisms-of-groups">
-   Morphisms of Groups
+  <a class="reference internal nav-link" href="#homomorphisms-isomorphism-theorems">
+   Homomorphisms &amp; Isomorphism Theorems
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
@@ -436,53 +438,55 @@ title="Print to PDF"
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#sets">
-   Sets
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#relations">
-   Relations
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#mathematical-structure">
-   Mathematical Structure
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#equivalence-relations">
-   Equivalence Relations
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#id1">
-   Relations
+   Symmetry
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#sets">
+     Sets
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#relations">
+     Relations
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#mathematical-structure">
+     Mathematical Structure
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#operations-on-sets">
+     Operations on Sets
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#operators">
+     Operators
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#equivalence-relations">
+     Equivalence Relations
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#group-axioms">
+   Group Axioms
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#symetry">
-   Symetry
+  <a class="reference internal nav-link" href="#cosets-normal-subgroups">
+   Cosets &amp; Normal Subgroups
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#groups">
-   Groups
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#cosets-lagranges-theorem">
-   Cosets &amp; Lagranges Theorem
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#normal-subgroups">
-   Normal Subgroups
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#morphisms-of-groups">
-   Morphisms of Groups
+  <a class="reference internal nav-link" href="#homomorphisms-isomorphism-theorems">
+   Homomorphisms &amp; Isomorphism Theorems
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
@@ -512,24 +516,42 @@ title="Print to PDF"
                 
   <section class="tex2jax_ignore mathjax_ignore" id="symmetry">
 <h1>Symmetry<a class="headerlink" href="#symmetry" title="Permalink to this headline">#</a></h1>
-<p>Issac Newton, the allience of higher mathematics and modern physics have irreversably altered our relationship with the universe.</p>
+<p>Forever fused by Newton, the allience of higher mathematics and modern physics have irreversably altered our relationship with the universe. [write something here]</p>
 <p>This feat is a direct consequence of the following truth:</p>
 <div style="text-align:center;">
 <b>groups</b> are a <b>formal language</b> for describing <b>symmetries</b>.</div>
 <br>
-<p>Restated, group’s describe the “algebraic form” of symmetries, allowing us to better understand the meaning and algebraic structure of symmetries. However, before going forward, our first goal is to understand, precisely, the modern mathematical attempt to understanding the meaning of “symmetry.”</p>
-<p>This section motivates the study of groups by revisiting notions of sets, relations, functions, mathematical structure, operations on sets, operators on sets, equivalence relations, and symmetry. The examples provided serve two crucial and equally important,</p>
+<p>Much like derivatives and the notion of infinitesmal change, groups give us a mathematical structure that extend our ability to understand and leverage symmetries. Thus, before going forward, our first goal is to understand, precisely, the modern mathematical attempt to understanding the meaning of “symmetry.”</p>
+<p>Precisely, this section motivates the study of groups by revisiting notions of sets, relations, mathematical structure, operations on sets, operators on sets, equivalence relations, and symmetry. This is followed by some basic results proved from the group axioms, cosets, isomorphisms, and group actions.</p>
+<section id="id1">
+<h2>Symmetry<a class="headerlink" href="#id1" title="Permalink to this headline">#</a></h2>
 <section id="sets">
-<h2>Sets<a class="headerlink" href="#sets" title="Permalink to this headline">#</a></h2>
+<h3>Sets<a class="headerlink" href="#sets" title="Permalink to this headline">#</a></h3>
 </section>
 <section id="relations">
-<h2>Relations<a class="headerlink" href="#relations" title="Permalink to this headline">#</a></h2>
+<h3>Relations<a class="headerlink" href="#relations" title="Permalink to this headline">#</a></h3>
 </section>
 <section id="mathematical-structure">
-<h2>Mathematical Structure<a class="headerlink" href="#mathematical-structure" title="Permalink to this headline">#</a></h2>
+<h3>Mathematical Structure<a class="headerlink" href="#mathematical-structure" title="Permalink to this headline">#</a></h3>
+</section>
+<section id="operations-on-sets">
+<h3>Operations on Sets<a class="headerlink" href="#operations-on-sets" title="Permalink to this headline">#</a></h3>
+</section>
+<section id="operators">
+<h3>Operators<a class="headerlink" href="#operators" title="Permalink to this headline">#</a></h3>
 </section>
 <section id="equivalence-relations">
-<h2>Equivalence Relations<a class="headerlink" href="#equivalence-relations" title="Permalink to this headline">#</a></h2>
+<h3>Equivalence Relations<a class="headerlink" href="#equivalence-relations" title="Permalink to this headline">#</a></h3>
+</section>
+</section>
+<section id="group-axioms">
+<h2>Group Axioms<a class="headerlink" href="#group-axioms" title="Permalink to this headline">#</a></h2>
+</section>
+<section id="cosets-normal-subgroups">
+<h2>Cosets &amp; Normal Subgroups<a class="headerlink" href="#cosets-normal-subgroups" title="Permalink to this headline">#</a></h2>
+</section>
+<section id="homomorphisms-isomorphism-theorems">
+<h2>Homomorphisms &amp; Isomorphism Theorems<a class="headerlink" href="#homomorphisms-isomorphism-theorems" title="Permalink to this headline">#</a></h2>
 <p>Sets are not merely defined as a collection of elements. Sets are defined by their elements and by the mathematical structure that glues elements together in any meaningful sense (ordering, summation, multiplication, orientation, etc.)</p>
 <div class="proof definition admonition" id="set">
 <p class="admonition-title"><span class="caption-number">Definition 1 </span> (Set)</p>
@@ -541,30 +563,12 @@ s_1, s_2, \ldots \in S.
 \]</div>
 </section>
 </div><p>Elements may be any kind of mathematical objects, including numbers, lists of numbers, mappings (functions) between sets of numbers, and even other sets.</p>
-</section>
-<section id="id1">
-<h2>Relations<a class="headerlink" href="#id1" title="Permalink to this headline">#</a></h2>
 <p>Relations and operations mathematically characterize the various kinds of structures that could exist between mathematical objects.
 Relation can also describe a connection between two elements of different sets. Operations provide a way to discuss and view arbitrary elements by combining or manipulating other elements of a set. Together, these concepts form the foundation of many branches of mathematics and are used to define mathematical objects such as groups, vector spaces, and fields.</p>
-</section>
-<section id="symetry">
-<h2>Symetry<a class="headerlink" href="#symetry" title="Permalink to this headline">#</a></h2>
 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. U</p>
-</section>
-<section id="groups">
-<h2>Groups<a class="headerlink" href="#groups" title="Permalink to this headline">#</a></h2>
 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. U</p>
-</section>
-<section id="cosets-lagranges-theorem">
-<h2>Cosets &amp; Lagranges Theorem<a class="headerlink" href="#cosets-lagranges-theorem" title="Permalink to this headline">#</a></h2>
 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. U</p>
-</section>
-<section id="normal-subgroups">
-<h2>Normal Subgroups<a class="headerlink" href="#normal-subgroups" title="Permalink to this headline">#</a></h2>
 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. U</p>
-</section>
-<section id="morphisms-of-groups">
-<h2>Morphisms of Groups<a class="headerlink" href="#morphisms-of-groups" title="Permalink to this headline">#</a></h2>
 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. U</p>
 </section>
 <section id="group-actions">
