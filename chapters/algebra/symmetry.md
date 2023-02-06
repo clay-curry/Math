@@ -1,6 +1,6 @@
 # Symmetry
 
-Issac Newton, the allience of higher mathematics and modern physics have irreversably altered our relationship with the universe.
+Forever fused by Newton, the allience of higher mathematics and modern physics have irreversably altered our relationship with the universe. \[write something here\]
 
 This feat is a direct consequence of the following truth:
 
@@ -8,16 +8,28 @@ This feat is a direct consequence of the following truth:
 <b>groups</b> are a <b>formal language</b> for describing <b>symmetries</b>.</div>
 <br>
 
-Restated, group's describe the "algebraic form" of symmetries, allowing us to better understand the meaning and algebraic structure of symmetries. However, before going forward, our first goal is to understand, precisely, the modern mathematical attempt to understanding the meaning of "symmetry."
+Much like derivatives and the notion of infinitesmal change, groups give us a mathematical structure that extend our ability to understand and leverage symmetries. Thus, before going forward, our first goal is to understand, precisely, the modern mathematical attempt to understanding the meaning of "symmetry."
 
-This section motivates the study of groups by revisiting notions of sets, relations, functions, mathematical structure, operations on sets, operators on sets, equivalence relations, and symmetry. The examples provided serve two crucial and equally important,
+Precisely, this section motivates the study of groups by revisiting notions of sets, relations, mathematical structure, operations on sets, operators on sets, equivalence relations, and symmetry. This is followed by some basic results proved from the group axioms, cosets, isomorphisms, and group actions.
 
-## Sets
-## Relations
+## Symmetry
 
-## Mathematical Structure
-## Equivalence Relations
+### Sets
+### Relations
 
+### Mathematical Structure
+
+### Operations on Sets
+
+### Operators
+
+### Equivalence Relations
+
+## Group Axioms
+
+## Cosets & Normal Subgroups
+
+## Homomorphisms & Isomorphism Theorems
 
 
 Sets are not merely defined as a collection of elements. Sets are defined by their elements and by the mathematical structure that glues elements together in any meaningful sense (ordering, summation, multiplication, orientation, etc.)
@@ -34,30 +46,21 @@ $$
 
 Elements may be any kind of mathematical objects, including numbers, lists of numbers, mappings (functions) between sets of numbers, and even other sets.
 
-## Relations
 
 Relations and operations mathematically characterize the various kinds of structures that could exist between mathematical objects.
 Relation can also describe a connection between two elements of different sets. Operations provide a way to discuss and view arbitrary elements by combining or manipulating other elements of a set. Together, these concepts form the foundation of many branches of mathematics and are used to define mathematical objects such as groups, vector spaces, and fields.
 
-## Symetry
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. U
-
-## Groups
-
 
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. U
 
-## Cosets & Lagranges Theorem
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. U
+
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. U
 
-## Normal Subgroups
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. U
-
-## Morphisms of Groups
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. U
 

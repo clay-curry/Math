@@ -1,7 +1,7 @@
 # Book settings
 # Learn more at https://jupyterbook.org/customize/config.html
 
-title                       : "Equivariant Deep Learning: Theoretical Documentation"
+title                       : "Symmetry, Representations, and Neural Networks"
 author                      : Clay Curry
 copyright                   : "2023"
 logo                        : assets/logo.png
