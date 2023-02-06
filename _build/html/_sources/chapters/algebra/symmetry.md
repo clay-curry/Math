@@ -1,13 +1,24 @@
 # Symmetry
 
-The mathematical group and group theory are a pillar of modern mathematics and physics. This feat is a direct consequence of the following truth: 
+Issac Newton, the allience of higher mathematics and modern physics have irreversably altered our relationship with the universe.
 
-<div style="text-align:center;"><b>groups</b> encapsulate the <b>algebraic structure</b> underlying all <b>symmetries</b>.</div>
+This feat is a direct consequence of the following truth:
+
+<div style="text-align:center;">
+<b>groups</b> are a <b>formal language</b> for describing <b>symmetries</b>.</div>
 <br>
 
-This section motivates the study of groups by revisiting notions of sets, operations on sets, relations between sets, and equivalence relations. Later
+In other words, group's describe the "algebraic form" of symmetries, allowing us to better understand the meaning and algebraic structure of symmetries. However, before going forward, our first goal is to understand, precisely, the modern mathematical attempt to understanding the meaning of "symmetry."
+
+This section motivates the study of groups by revisiting notions of sets, relations, functions, mathematical structure, operations on sets, operators on sets, equivalence relations, and symmetry. The examples provided serve two crucial and equally important,
 
 ## Sets
+## Relations
+
+## Mathematical Structure
+## Equivalence Relations
+
+
 
 Sets are not merely defined as a collection of elements. Sets are defined by their elements and by the mathematical structure that glues elements together in any meaningful sense (ordering, summation, multiplication, orientation, etc.)
 
@@ -19,7 +30,6 @@ The *set* $S$ is the collection of all objects $s_1, s_2, \ldots$ that individua
 $$
 s_1, s_2, \ldots \in S.
 $$
-
 ````
 
 Elements may be any kind of mathematical objects, including numbers, lists of numbers, mappings (functions) between sets of numbers, and even other sets.
@@ -29,11 +39,13 @@ Elements may be any kind of mathematical objects, including numbers, lists of nu
 Relations and operations mathematically characterize the various kinds of structures that could exist between mathematical objects.
 Relation can also describe a connection between two elements of different sets. Operations provide a way to discuss and view arbitrary elements by combining or manipulating other elements of a set. Together, these concepts form the foundation of many branches of mathematics and are used to define mathematical objects such as groups, vector spaces, and fields.
 
-## Equivalence
+## Symetry
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. U
 
 ## Groups
+
+
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. U
 

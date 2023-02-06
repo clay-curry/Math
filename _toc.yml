@@ -21,10 +21,11 @@ parts:
 
 - caption: Artificial Neural Networks
   chapters:
+  - file: chapters/learning/explainability
   - file: chapters/learning/learning_theory
+  - file: chapters/learning/unsupervised_learning
   - file: chapters/learning/neural_networks
   - file: chapters/learning/neuroevolution
   - file: chapters/learning/universal_approximation
   - file: chapters/learning/equivariant_neural_networks
-  - file: chapters/learning/unsupervised_learning
-  - file: chapters/learning/explainability
+  - file: chapters/learning/geometric_graphs.md
