@@ -1,7 +1,7 @@
 # Book settings
 # Learn more at https://jupyterbook.org/customize/config.html
 
-title                       : "Symmetry, Representations, and Neural Networks"
+title                       : "At the Interface of Algebra and Neural Networks"
 author                      : Clay Curry
 copyright                   : "2023"
 logo                        : assets/logo.png
