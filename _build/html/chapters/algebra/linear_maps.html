@@ -401,16 +401,18 @@ title="Print to PDF"
   <a class="reference internal nav-link" href="#vector-spaces">
    Vector Spaces
   </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#span-linear-independence">
-   Span &amp; Linear Independence
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#bases-dimension">
-   Bases &amp; Dimension
-  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#span-linear-independence">
+     Span &amp; Linear Independence
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#bases-dimension">
+     Bases &amp; Dimension
+    </a>
+   </li>
+  </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#vector-space-of-linear-maps">
@@ -452,16 +454,18 @@ title="Print to PDF"
   <a class="reference internal nav-link" href="#vector-spaces">
    Vector Spaces
   </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#span-linear-independence">
-   Span &amp; Linear Independence
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#bases-dimension">
-   Bases &amp; Dimension
-  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#span-linear-independence">
+     Span &amp; Linear Independence
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#bases-dimension">
+     Bases &amp; Dimension
+    </a>
+   </li>
+  </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#vector-space-of-linear-maps">
@@ -492,58 +496,161 @@ title="Print to PDF"
                 
   <section class="tex2jax_ignore mathjax_ignore" id="linear-maps">
 <h1>Linear Maps<a class="headerlink" href="#linear-maps" title="Permalink to this headline">#</a></h1>
+<p>Linear algebra is the study of linear maps on finite-dimensional vector spaces. Vector spaces are defined in this chapter, and their basic properties are developed.</p>
 <p>The central goal of linear algebra is to:</p>
 <ol class="simple">
-<li><p>illustrate, and</p></li>
-<li><p>completely characterize,</p></li>
+<li><p>describe the properties properties, and</p></li>
+<li><p>provide a recipe to completely parameterize,</p></li>
 </ol>
-<p>all linear maps between arbitrary finite-dimensional vector spaces.</p>
-<p>This section serves to help the reader begin to appreciate the above statement. To start, we will ponder the central object of study in linear algebra, linear maps. Like groups, the theory of linear maps is developed to hold for an entire class of mathematical objects, uncoupled from any particular set of objects or even an a particular definition of addition or scalar multiplication of objects. We start with the following axiomatic definition.</p>
+<p>all linear maps between arbitrary finite-dimensional vector spaces. Vector spaces are a generalization of the description of a plane using two coordinates, as published by Descartes in 1637. Like groups, the theory of linear maps holds for an entire class of examples, where results are uncoupled from any particular cases. We start with the following axiomatic definition.</p>
 <div class="proof axiom admonition" id="linear-map">
 <p class="admonition-title"><span class="caption-number">Axiom 1 </span> (Linear Map)</p>
 <section class="axiom-content" id="proof-content">
-<p>The function <span class="math notranslate nohighlight">\(f: V \to W\)</span> is said to <strong>map linearly</strong> from <span class="math notranslate nohighlight">\(V\)</span> to <span class="math notranslate nohighlight">\(W\)</span> when the following two properties are satisfied</p>
-<ol class="simple">
-<li><p>Additivity of <span class="math notranslate nohighlight">\(f\)</span></p></li>
-</ol>
-<div class="math notranslate nohighlight">
-\[
-f(a + b) = f(a) + f(b)
-\]</div>
-<ol class="simple">
-<li><p>Homogeneity of <span class="math notranslate nohighlight">\(f\)</span></p></li>
-</ol>
-<div class="math notranslate nohighlight">
-\[
-f(\lambda a) = \lambda f(a)
-\]</div>
-<p>for any given two elements <span class="math notranslate nohighlight">\(a, b \in V\)</span> and any given scalar <span class="math notranslate nohighlight">\(\lambda \in \mathbb{F}\)</span>.</p>
+<p>We will find it useful to make the distinction that  any map <span class="math notranslate nohighlight">\(f: V \to W\)</span> sending each element <span class="math notranslate nohighlight">\(v \in V\)</span> to some element in the image <span class="math notranslate nohighlight">\(f(V) \subset W\)</span>, is called a <strong>linear map</strong> from <span class="math notranslate nohighlight">\(V\)</span> to <span class="math notranslate nohighlight">\(W\)</span> whenever the following two conditions hold,</p>
+<ul class="simple">
+<li><p><strong>Additivity</strong></p></li>
+</ul>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{equation*} f(a + b) = f(a) + f(b) \end{equation*}\]</div>
+<ul class="simple">
+<li><p><strong>Homogeneity</strong></p></li>
+</ul>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{gather*} f(\lambda a) = \lambda f(a) \end{gather*}\]</div>
+<p>for the image of <span class="math notranslate nohighlight">\(a, b \in V\)</span> and any scalar multiple <span class="math notranslate nohighlight">\(\lambda a\)</span> of <span class="math notranslate nohighlight">\(a\)</span>.</p>
 </section>
 </div><hr class="docutils" />
 <section id="vector-spaces">
 <h2>Vector Spaces<a class="headerlink" href="#vector-spaces" title="Permalink to this headline">#</a></h2>
-<p>On initial introspection, it is natural, perhaps tempting, to glance over a subtle condition of assumed in the {ref}`defintion of linear map<a class="reference external" href="prf:axiom:linear-map">prf:axiom:linear-map</a>.  Linear maps constitute a class of group morphisms compatible only with vector spaces.</p>
+<p>On first introspection, it is natural, perhaps tempting, to glance over a handful of deep, subtle requirements that <a class="reference internal" href="#linear-map">Axiom 1</a> imposes regarding the structure of <span class="math notranslate nohighlight">\(V\)</span> and <span class="math notranslate nohighlight">\(W\)</span>.  Observe, it may not neccessarily be true that there even exists an obvious sum of two elements in <span class="math notranslate nohighlight">\(V\)</span> or that,</p>
+<div class="math notranslate nohighlight">
+\[
+a + b \in V
+\]</div>
+<p>corresponds to precisely one element in <span class="math notranslate nohighlight">\(V\)</span> (the existence of a well-defined summation structure in <span class="math notranslate nohighlight">\(V\)</span>).
+Moreover, for any given field <span class="math notranslate nohighlight">\(\mathbb{F}\)</span>, it may also not be neccessarily be true that there even exists an obvious definition of scalar multiplication that assigns precisely one element</p>
+<div class="math notranslate nohighlight">
+\[
+\lambda a \in V
+\]</div>
+<p>to each scalar-vector pair, <span class="math notranslate nohighlight">\((\lambda, a) \in \mathbb{F} \times V\)</span>. In other words, if a map <span class="math notranslate nohighlight">\(f : V \to W\)</span> is a linear mapping, then we are implicitly assuming that <span class="math notranslate nohighlight">\(V\)</span> has a well-defined summation structure <span class="math notranslate nohighlight">\(+_V : V \times V \to V\)</span> and scalar-multiplication structure <span class="math notranslate nohighlight">\(\cdot_V : \mathbb \times V \to V\)</span> compatible with <span class="math notranslate nohighlight">\(f\)</span>. Likewise, by assuming the existence of a linear map <span class="math notranslate nohighlight">\(f: V \to W\)</span>, we also require the existence of a summation structure <span class="math notranslate nohighlight">\(+_W : W \times W \to W\)</span> and a scalar multiplication structure <span class="math notranslate nohighlight">\(\cdot_W : \mathbb{F} \times W \to W\)</span> so that <span class="math notranslate nohighlight">\(f\)</span> may satisfy the additivity and homogeneity structure defined in <a class="reference internal" href="#linear-map">Axiom 1</a>. Thus, if one wishes to build a solid theory of linear maps, we are motivated first to consider what types of <em>sets</em> linear maps can be well-defined over.
+Distilling fundamental properties of addition and scalar multiplication, we define vector spaces as follows,</p>
+<aside class="margin sidebar">
+<p class="sidebar-title"></p>
+<p>Since elements of a vector space relate under some scalar multiplication structure, which itself depends on the choice of <span class="math notranslate nohighlight">\(\mathbb{F}\)</span>, the phrase “<span class="math notranslate nohighlight">\(V\)</span> is a vector space over <span class="math notranslate nohighlight">\(\mathbb{F}\)</span>” indicates that <span class="math notranslate nohighlight">\(V\)</span> is a vector space and, for the situation at hand, the choice of scalar field is <span class="math notranslate nohighlight">\(\mathbb{F}\)</span>.</p>
+</aside>
 <div class="proof axiom admonition" id="vector-space">
 <p class="admonition-title"><span class="caption-number">Axiom 2 </span> (Vector Space)</p>
 <section class="axiom-content" id="proof-content">
-<p>A <strong>vector space</strong> is a quadruple <span class="math notranslate nohighlight">\((V, \mathbb{F}, +, \cdot)\)</span> where <span class="math notranslate nohighlight">\(V\)</span> is a set, <span class="math notranslate nohighlight">\(\mathbb{F}\)</span> is a field, <span class="math notranslate nohighlight">\(+: V \times V \to V\)</span> is a composition law colloquially called “addition”, and <span class="math notranslate nohighlight">\(\cdot: \mathbb{F} \times V \to V\)</span> is a scalar multiplication, whose individual definitions come together to satisfy the following properties</p>
-<ol class="simple">
-<li><p><strong>associativity</strong>
-sums remains equal under arbitrary association, i.e.</p></li>
-<li><p>Given any <span class="math notranslate nohighlight">\(a\)</span> belonging to <span class="math notranslate nohighlight">\(V\)</span>, we can find some neutral element <span class="math notranslate nohighlight">\(e_a\)</span> within <span class="math notranslate nohighlight">\(V\)</span> which leaves <span class="math notranslate nohighlight">\(a\)</span> unchanged under addition, that is, <span class="math notranslate nohighlight">\(a\)</span> can decompose as <span class="math notranslate nohighlight">\(a = e_a + a\)</span>,</p></li>
-<li><p>Given any element <span class="math notranslate nohighlight">\(a\)</span> belonging to <span class="math notranslate nohighlight">\(V\)</span>, we can find some annihilator element <span class="math notranslate nohighlight">\(-a\)</span> belonging to <span class="math notranslate nohighlight">\(V\)</span>, which combines with <span class="math notranslate nohighlight">\(a\)</span> under addition to produce a neutral element <span class="math notranslate nohighlight">\(e_{a'}\)</span> in <span class="math notranslate nohighlight">\(V\)</span>, i.e., <span class="math notranslate nohighlight">\(a + (-a) = e_{a'}\)</span>,</p></li>
-</ol>
+<p>A <strong>vector space</strong> is a quadruple <span class="math notranslate nohighlight">\((V, \mathbb{F}, +, \cdot)\)</span> where <span class="math notranslate nohighlight">\(V\)</span> is a set, <span class="math notranslate nohighlight">\(\mathbb{F}\)</span> is an algebraic field of scalars, <span class="math notranslate nohighlight">\(+: V \times V \to V\)</span> is an addition on <span class="math notranslate nohighlight">\(V\)</span>, and <span class="math notranslate nohighlight">\(\cdot: \mathbb{F} \times V \to V\)</span> is a scalar multiplication on the cartesian product <span class="math notranslate nohighlight">\(\mathbb{F} \times V\)</span>, whose definitions satisfy the following properties</p>
+<ul class="simple">
+<li><p><strong>associativity:</strong> the sum of three elements <span class="math notranslate nohighlight">\(v_1, v_2, v_3 \in V\)</span> is invariant under association,</p></li>
+</ul>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{gather*} v_1 + (v_2 + v_3) = (v_1 + v_2) + v_3 \end{gather*}\]</div>
+<ul class="simple">
+<li><p><strong>commutativity:</strong> any two given elements <span class="math notranslate nohighlight">\(v, w \in V\)</span> commute under addition,</p></li>
+</ul>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{gather*} v + w = w + v  \end{gather*}\]</div>
+<ul class="simple">
+<li><p><strong>neutral element:</strong> there exists some element that acts neutrally under addition,</p></li>
+</ul>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{gather*} \exists 0 \in V, \forall v \in V, v + 0 = v \in V \end{gather*}\]</div>
+<ul class="simple">
+<li><p><strong>annihilator element:</strong> there exists some element that gives the identity element,</p></li>
+</ul>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{gather*} \forall v \in V, \exists w \in V, v + w = 0 \in V \end{gather*}\]</div>
+<ul class="simple">
+<li><p><strong>neutral scalar:</strong> a neutral factor <span class="math notranslate nohighlight">\(1 \in \mathbb{F}\)</span> is also a neutral scalar,</p></li>
+</ul>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{gather*} (1) v = v \in V,  \end{gather*}\]</div>
+<ul class="simple">
+<li><p><strong>compatibile scalar multiples</strong>: scalars associate compatibly between <span class="math notranslate nohighlight">\(\mathbb{F}\)</span> and <span class="math notranslate nohighlight">\(V\)</span>,</p></li>
+</ul>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{gather*} (a \cdot_\mathbb{F} b) \cdot_V v = a \cdot_V (b \cdot_V v) \end{gather*}\]</div>
+<ul class="simple">
+<li><p><strong>distributivity of addition over scalar multiplication</strong></p></li>
+</ul>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{gather*} (a + b) v = (av) + (bv) \end{gather*}\]</div>
+<ul class="simple">
+<li><p><strong>distributivity of scalar multiplication over addition</strong></p></li>
+</ul>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{gather*} a (v + w) = (av) + (aw) \end{gather*}\]</div>
 </section>
-</div></section>
+</div><p>With this definition, we can view linear maps as constituting a class of morphisms between two <em>vector spaces</em> with compatible summation and scalar multiplication structures over the same field <span class="math notranslate nohighlight">\(\mathbb{F}\)</span>.</p>
+<p>In practice, the scalar field <span class="math notranslate nohighlight">\(\mathbb{F}\)</span> will either be the scalar field <span class="math notranslate nohighlight">\(\mathbb{R}\)</span> of real numbers or the scalar field <span class="math notranslate nohighlight">\(\mathbb{C}\)</span> of complex numbers. For brevity, we will make the following two definitions,</p>
+<div class="proof definition admonition" id="real-complex-vector-space">
+<p class="admonition-title"><span class="caption-number">Definition 2 </span> (Real Vector Space, Complex Vector Space)</p>
+<section class="definition-content" id="proof-content">
+<p>A vector space over <span class="math notranslate nohighlight">\(\mathbb{R}\)</span> is called a <strong>real vector space</strong>.</p>
+<p>A vector space over <span class="math notranslate nohighlight">\(\mathbb{C}\)</span> is called a <strong>complex vector space</strong>.</p>
+</section>
+</div><p>The following geometric language is defined for convenience of thinking. <em>Linear algebra</em> focuses on the <em><strong>algebraic</strong></em> structure of vector spaces; intuition depending greatly on geometric insight should be avoided when invoked at the expense algebraic insight.</p>
+<div class="proof definition admonition" id="vector-point">
+<p class="admonition-title"><span class="caption-number">Definition 3 </span> (Vector, Point)</p>
+<section class="definition-content" id="proof-content">
+<p>Elements of a vector space are called <strong>vectors</strong> or <strong>points</strong>.</p>
+</section>
+</div><aside class="margin sidebar">
+<p class="sidebar-title"></p>
+<p>Common geometric notions  like <code class="docutils literal notranslate"><span class="pre">angle</span></code>, <code class="docutils literal notranslate"><span class="pre">orientation</span></code>, and <code class="docutils literal notranslate"><span class="pre">distance</span></code> between points and vectors (unless we consider a vector space with an <em>inner product structure</em>)  do not have any obvious meaning in abstract vector spaces.</p>
+<p><em>Inner product spaces</em> will be a later topic of discussion.</p>
+</aside>
+<p>The following operation is defined for convenience of thinking and proof-writing. It does not ordain a set with any additional structure beyond what is already defined by its parent operation.</p>
+<p>There are many more examples of vector spaces than <span class="math notranslate nohighlight">\(\mathbb{F}^n\)</span>, which are described extensively in the literature.</p>
+<div class="proof example admonition" id="set-vector-space">
+<p class="admonition-title"><span class="caption-number">Example 1 </span> (<span class="math notranslate nohighlight">\(\mathbb{F}^S\)</span>)</p>
+<section class="example-content" id="proof-content">
+<p>If <span class="math notranslate nohighlight">\(S\)</span> is any set, then <span class="math notranslate nohighlight">\(\mathbb{F}^S\)</span> denotes the set of functions <span class="math notranslate nohighlight">\(\{ f : f : S \rightarrow \mathbb{F}\}\)</span>. For <span class="math notranslate nohighlight">\(f, g \in \mathbb{F}^S\)</span>, addition and scalar multiplication are defined by:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\((f+g)(x) = f(x) + g(x)\)</span>    for all <span class="math notranslate nohighlight">\(x \in S\)</span>.</p></li>
+<li><p><span class="math notranslate nohighlight">\((\lambda \cdot f)(x) = \lambda \cdot f(x)\)</span>   for all <span class="math notranslate nohighlight">\(x \in S\)</span>.</p></li>
+</ul>
+<p>It is easy to verify that <span class="math notranslate nohighlight">\(\mathbb{F}^S\)</span> is a vector space.</p>
+</section>
+</div><p>The following theorems hold for all vector spaces.</p>
+<div class="proof theorem admonition" id="unique-additive-identity">
+<p class="admonition-title"><span class="caption-number">Theorem 1 </span> (Every vector space has a unique additive identity.)</p>
+<section class="theorem-content" id="proof-content">
+<p>Suppose <span class="math notranslate nohighlight">\(0\)</span> and <span class="math notranslate nohighlight">\(0'\)</span> are additive identities in <span class="math notranslate nohighlight">\(V\)</span>. Then <span class="math notranslate nohighlight">\(0 = 0'\)</span>.</p>
+</section>
+</div><div class="proof dropdown admonition" id="proof">
+<p>Proof. Suppose <span class="math notranslate nohighlight">\(0\)</span> and <span class="math notranslate nohighlight">\(0'\)</span> are neutral elements in a vector space <span class="math notranslate nohighlight">\(V\)</span>. Then</p>
+<div class="math notranslate nohighlight">
+\[
+0 = 0 + 0' = 0' + 0 = 0'
+\]</div>
+<p>where the first equality holds because <span class="math notranslate nohighlight">\(0\)</span> is invariant under adddition with a neutral element (assumed); the second equality holds by the commutative property of <span class="math notranslate nohighlight">\(V\)</span> (<a class="reference internal" href="#vector-space">Axiom 2</a>), and the final equality holds because <span class="math notranslate nohighlight">\(0'\)</span> is invariant under adddition with a neutral element (assumed).</p>
+<p>This equality shows that any two neutral elements in <span class="math notranslate nohighlight">\(V\)</span> are, in fact, equal. Every vector space has a unique additive identity.</p>
+</div>
 <section id="span-linear-independence">
-<h2>Span &amp; Linear Independence<a class="headerlink" href="#span-linear-independence" title="Permalink to this headline">#</a></h2>
+<h3>Span &amp; Linear Independence<a class="headerlink" href="#span-linear-independence" title="Permalink to this headline">#</a></h3>
 </section>
 <section id="bases-dimension">
-<h2>Bases &amp; Dimension<a class="headerlink" href="#bases-dimension" title="Permalink to this headline">#</a></h2>
+<h3>Bases &amp; Dimension<a class="headerlink" href="#bases-dimension" title="Permalink to this headline">#</a></h3>
+</section>
 </section>
 <section id="vector-space-of-linear-maps">
 <h2>Vector Space of Linear Maps<a class="headerlink" href="#vector-space-of-linear-maps" title="Permalink to this headline">#</a></h2>
-<section id="algebraic-operations">
+<p>Recall the above definition of a linear map,</p>
+<p>Using the terminology later defined, could have made the more concise but nevertheless equivalent definition,</p>
+<div class="proof proposition admonition" id="linear-comb-map">
+<p class="admonition-title"><span class="caption-number">Proposition 1 </span> (Linear Map)</p>
+<section class="proposition-content" id="proof-content">
+<p>Consider any <span class="math notranslate nohighlight">\(f: V \to W\)</span>. Observe <span class="math notranslate nohighlight">\(f\)</span> is a linear map if and only if linear combinations are preserved under <span class="math notranslate nohighlight">\(f\)</span>, i.e.</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{equation*}
+f(a_1 v_1 + \cdots + a_n v_n) = a_1 f(v_1) + \cdots + a_n f(v_n)
+\end{equation*}\]</div>
+</section>
+</div><section id="algebraic-operations">
 <h3>Algebraic Operations<a class="headerlink" href="#algebraic-operations" title="Permalink to this headline">#</a></h3>
 </section>
 </section>
