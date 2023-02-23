@@ -4,7 +4,7 @@ The construction of learning algorithms capable of naturally occurring systems, 
 
 Using only linear algebra, Part I of the text covers the basics of linear representations and reducibility, tensor products of representations, the compact group approach to representation theory, Clebsch-Gordan Theory, and the Wigner-Eckart Theorem. Part II of this text will present the lineage of recent work in equivariant neural networks, particularly geometric graphs, and will be demonstrated using Pytorch and Pytorch Lightning. Part III is yet to be determined.
 
-These notes are compiled for a general (mathematically-inclined) computer science audience, where the prerequisites include a basic understanding of linear algebra, multivariate calculus, and familiarity with the Python language and its machine learning libraries. It is my hope that this book will be useful to both mathematicians, scientists, engineers, and data analysts.Most importantly, my hope is that someone will find these notes to be an enlightening and worthile jouney to see yet another topic in pure math diffuse into the applied.
+It is my hope that this book will be useful to both mathematicians, scientists, engineers, and data analysts, where the prerequisites include a basic understanding of linear algebra, multivariate calculus, and familiarity with the Python language and its machine learning libraries. .Most importantly, my hope is that someone will find these notes to be an enlightening and worthile jouney to see yet another topic in pure math diffuse into the applied.
 
 <p>
 <div style="text-align: right">Clay Curry</div>
