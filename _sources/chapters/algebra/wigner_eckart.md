@@ -1,1 +1,0 @@
-# Wigner-Eckart Theorem

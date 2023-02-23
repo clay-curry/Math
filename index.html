@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Preface &#8212; At the Interface of Algebra and Neural Networks</title>
+    <title>Introduction &#8212; Symmetry, Representations, and Neural Networks</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -97,7 +97,7 @@ const thebe_selector_output = ".output, .cell_output"
       <img src="_static/logo.png" class="logo" alt="logo">
       
       
-      <h1 class="site-logo" id="site-title">At the Interface of Algebra and Neural Networks</h1>
+      <h1 class="site-logo" id="site-title">Symmetry, Representations, and Neural Networks</h1>
       
     </a>
 </div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
@@ -109,13 +109,13 @@ const thebe_selector_output = ".output, .cell_output"
         <ul class="nav bd-sidenav bd-sidenav__home-link">
             <li class="toctree-l1 current active">
                 <a class="reference internal" href="#">
-                    Preface
+                    Introduction
                 </a>
             </li>
         </ul>
         <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
-  Part I
+  Abstract Algebra
  </span>
 </p>
 <ul class="nav bd-sidenav">
@@ -145,18 +145,23 @@ const thebe_selector_output = ".output, .cell_output"
   </a>
  </li>
  <li class="toctree-l1">
+  <a class="reference internal" href="chapters/algebra/topological_spaces.html">
+   Topological Spaces
+  </a>
+ </li>
+ <li class="toctree-l1">
   <a class="reference internal" href="chapters/algebra/representations.html">
    Linear Representations
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="chapters/algebra/clebsch_gordan.html">
-   Clebsch-Gordan Theory
+  <a class="reference internal" href="chapters/algebra/fourier_analysis.html">
+   Fourier Analysis
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="chapters/algebra/wigner_eckart.html">
-   Wigner-Eckart Theorem
+  <a class="reference internal" href="chapters/algebra/probability.html">
+   Probability Distributions
   </a>
  </li>
  <li class="toctree-l1">
@@ -167,13 +172,33 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
-  Part II
+  Artificial Neural Networks
  </span>
 </p>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="chapters/learning/learning_theory_optimization.html">
-   Learning Theory &amp; Optimization
+  <a class="reference internal" href="chapters/learning/explainability.html">
+   The Difficult Problem
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="chapters/learning/learning_theory.html">
+   Learning Theory
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="chapters/learning/unsupervised_learning.html">
+   Learning without a Teacher
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="chapters/learning/neural_networks.html">
+   Neural Networks
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="chapters/learning/neuroevolution.html">
+   Neuroevolution
   </a>
  </li>
  <li class="toctree-l1">
@@ -182,40 +207,13 @@ const thebe_selector_output = ".output, .cell_output"
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="chapters/learning/group_equivariant_neural_networks.html">
-   Group Equivariant Neural Networks
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="chapters/learning/steerable_neural_networks.html">
-   Steerable Neural Networks
+  <a class="reference internal" href="chapters/learning/equivariant_neural_networks.html">
+   Equivariant Neural Networks
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="chapters/learning/geometric_graphs.html">
-   Geometric Graph Neural Networks
-  </a>
- </li>
-</ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Appendix
- </span>
-</p>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="chapters/appendix/topological_spaces.html">
-   Topological Spaces
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="chapters/appendix/probability.html">
-   Probability Distributions
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="chapters/appendix/fourier_analysis.html">
-   Fourier Analysis
+   Graph Neural Networks for Geometric Graphs
   </a>
  </li>
 </ul>
@@ -340,7 +338,7 @@ title="Print to PDF"
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Preface</h1>
+                <h1>Introduction</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -352,46 +350,41 @@ title="Print to PDF"
                 
               <div>
                 
-  <section class="tex2jax_ignore mathjax_ignore" id="preface">
-<h1>Preface<a class="headerlink" href="#preface" title="Permalink to this headline">#</a></h1>
-<p>The construction of learning algorithms capable of modeling natural systems (e.g., protein folding, sythesis design, biomarker disovery), has motivated much work on the problem of how to constrain the space of admissible hypotheses to include only those guaranteed to respect desired symmetries. One of the most important tools for achieving this is the use of group theory, Lie groups, and Lie algebras, which allow us to fully characterize sets of transformations that leave certain systems or physical quantities invariant. While Lie theory is increasingly being used in the machine learning literature, there is often a wide gulf between the presentations of the subject: research papers that get down to business quickly but are often imprecise and inconsistent in definitions and statements of theorems, versus math books which often have an impossibly steep barrier to entry.</p>
-<p>Using only linear algebra, Part I of the text covers the basics of linear representations and reducibility, tensor products of representations, the compact group approach to representation theory, Clebsch-Gordan Theory, and the Wigner-Eckart Theorem. Part II of this text will present the lineage of recent work in equivariant neural networks, particularly geometric graphs, and will be demonstrated using Pytorch and Pytorch Lightning. Part III is yet to be determined.</p>
-<p>It is my hope that this book will be useful to both mathematicians, scientists, engineers, and data analysts, where the prerequisites include a basic understanding of linear algebra, multivariate calculus, and familiarity with the Python language and its machine learning libraries. .Most importantly, my hope is that someone will find these notes to be an enlightening and worthile jouney to see yet another topic in pure math diffuse into the applied.</p>
+  <section class="tex2jax_ignore mathjax_ignore" id="introduction">
+<h1>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">#</a></h1>
+<p>These notes strive to provide a compact, self-contained introduction to some fascinating recent developments at the interface of group representation theory, non-commutative harmonic analysis (or Fourier Analysis), and artificial neural networks. After briefly introducing some theory, we will survey influential papers and distill core principles fueling an increasing trend to incorporte non-commutative algebraic structures in deep learning architectures, inducing crucial inductive biases for robust, data-efficient machine learning.  Importantly, these notes present a unified mathematical description of fundamental methodological developments in the construction of neural networks.</p>
+<p>These notes are compiled for a general (mathematically-inclined) computer science audience, where the prerequisites include a basic understanding of linear algebra, multivariate calculus, and familiarity with the Python language and its machine learning libraries. My hope (not expectation) is that someone will find these notes to be an enlightening case of, yet another, topic in pure math diffuse into the applied.</p>
 <p>
 <div style="text-align: right">Clay Curry</div>
 <div style="text-align: right">Norman, OK, USA</div>
 <div style="text-align: right">Feb 2023</div>
 </p>
 <div class="toctree-wrapper compound">
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Part I</span></p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Abstract Algebra</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="chapters/algebra/symmetry.html">Symmetry</a></li>
 <li class="toctree-l1"><a class="reference internal" href="chapters/algebra/linear_maps.html">Linear Maps</a></li>
 <li class="toctree-l1"><a class="reference internal" href="chapters/algebra/invariant_subspaces.html">Invariant Subspaces</a></li>
 <li class="toctree-l1"><a class="reference internal" href="chapters/algebra/inner_product_spaces.html">Inner Product Spaces</a></li>
 <li class="toctree-l1"><a class="reference internal" href="chapters/algebra/product_quotient_spaces.html">Product &amp; Quotient Spaces</a></li>
+<li class="toctree-l1"><a class="reference internal" href="chapters/algebra/topological_spaces.html">Topological Spaces</a></li>
 <li class="toctree-l1"><a class="reference internal" href="chapters/algebra/representations.html">Linear Representations</a></li>
-<li class="toctree-l1"><a class="reference internal" href="chapters/algebra/clebsch_gordan.html">Clebsch-Gordan Theory</a></li>
-<li class="toctree-l1"><a class="reference internal" href="chapters/algebra/wigner_eckart.html">Wigner-Eckart Theorem</a></li>
+<li class="toctree-l1"><a class="reference internal" href="chapters/algebra/fourier_analysis.html">Fourier Analysis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="chapters/algebra/probability.html">Probability Distributions</a></li>
 <li class="toctree-l1"><a class="reference internal" href="chapters/algebra/exercises.html">Exercises</a></li>
 </ul>
 </div>
 <div class="toctree-wrapper compound">
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Part II</span></p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Artificial Neural Networks</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="chapters/learning/learning_theory_optimization.html">Learning Theory &amp; Optimization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="chapters/learning/explainability.html">The Difficult Problem</a></li>
+<li class="toctree-l1"><a class="reference internal" href="chapters/learning/learning_theory.html">Learning Theory</a></li>
+<li class="toctree-l1"><a class="reference internal" href="chapters/learning/unsupervised_learning.html">Learning without a Teacher</a></li>
+<li class="toctree-l1"><a class="reference internal" href="chapters/learning/neural_networks.html">Neural Networks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="chapters/learning/neuroevolution.html">Neuroevolution</a></li>
 <li class="toctree-l1"><a class="reference internal" href="chapters/learning/universal_approximation.html">Universal Approximation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="chapters/learning/group_equivariant_neural_networks.html">Group Equivariant Neural Networks</a></li>
-<li class="toctree-l1"><a class="reference internal" href="chapters/learning/steerable_neural_networks.html">Steerable Neural Networks</a></li>
-<li class="toctree-l1"><a class="reference internal" href="chapters/learning/geometric_graphs.html">Geometric Graph Neural Networks</a></li>
-</ul>
-</div>
-<div class="toctree-wrapper compound">
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Appendix</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="chapters/appendix/topological_spaces.html">Topological Spaces</a></li>
-<li class="toctree-l1"><a class="reference internal" href="chapters/appendix/probability.html">Probability Distributions</a></li>
-<li class="toctree-l1"><a class="reference internal" href="chapters/appendix/fourier_analysis.html">Fourier Analysis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="chapters/learning/equivariant_neural_networks.html">Equivariant Neural Networks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="chapters/learning/geometric_graphs.html">Graph Neural Networks for Geometric Graphs</a></li>
 </ul>
 </div>
 </section>
@@ -408,7 +401,7 @@ title="Print to PDF"
             mode: "python"
         },
         kernelOptions: {
-            name: "python3",
+            kernelName: "python3",
             path: "./."
         },
         predefinedOutput: true

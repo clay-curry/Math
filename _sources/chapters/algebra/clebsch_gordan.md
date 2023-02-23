@@ -1,1 +1,0 @@
-# Clebsch-Gordan Theory

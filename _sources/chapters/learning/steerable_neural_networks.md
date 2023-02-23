@@ -1,1 +1,0 @@
-# Steerable Neural Networks
