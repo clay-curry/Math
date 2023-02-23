@@ -1,8 +1,8 @@
-# Graph Neural Networks for Geometric Graphs
-
-## Geometric Graphs
+# Geometric Graph Neural Networks
 
 ## Background
+
+### Geometric Graphs
 
 ### Graph Isomorphism
 
@@ -10,8 +10,20 @@
 
 ### Isomorphic Geometric Graphics
 
-### Geometric Graph Neural Networks
+### The Geometric Weisfeiler-Lehman Isomorphism Test
 
-## Universality and Discrimination
+---
 
-## The Geometric Weisfeiler-Lehman Isomorphism Test
+## Architectures
+
+### SchNet
+
+### DimeNet
+
+### E(n) Equivariant GNN
+
+### GVP-GNN
+
+### Tensor Field Network
+
+### MACE: Higher Order Equivariant Message Passing Neural Networks for Fast and Accurate Force Fields
