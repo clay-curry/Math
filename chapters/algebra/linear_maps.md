@@ -125,7 +125,7 @@ There are many more examples of vector spaces than $\mathbb{F}^n$, which are des
 ```{prf:example} $\mathbb{F}^S$
 :label: set-vector-space
 
-If $S$ is any set, then $\mathbb{F}^S$ denotes the set of functions $\{ f : f : S \rightarrow \mathbb{F}\}$. For $f, g \in \mathbb{F}^S$, addition and scalar multiplication are defined by:
+If $S$ is any set, then $\mathbb{F}^S$ denotes the set of functions $\{ f : f : S \mathbb{R}^ightarrow \mathbb{F}\}$. For $f, g \in \mathbb{F}^S$, addition and scalar multiplication are defined by:
 - $(f+g)(x) = f(x) + g(x)$    for all $x \in S$.
 - $(\lambda \cdot f)(x) = \lambda \cdot f(x)$   for all $x \in S$.
 
@@ -153,6 +153,260 @@ where the first equality holds because $0$ is invariant under adddition with a n
 
 This equality shows that any two neutral elements in $V$ are, in fact, equal. Every vector space has a unique additive identity.
 ```
+
+```{prf:theorem} Every element in a vector space has a unique additive inverse.
+:label: unique-additive-inverse
+
+For any $u, v, w \in V$ where $u + v = 0$ and $u + w = 0$. Then $v = w$.
+```
+
+```{prf:proof}
+:class: dropdown
+
+Choose any $u, v, w \in V$ where $u + v = 0$ and $u + w = 0$. Then
+\begin{align*}
+v &= v + 0 \\
+&= v + (u + w) \\
+&= (v + u) + w \\
+&= (u + v) + w \\
+&= 0 + w \\
+&= w \\
+\end{align*}
+Hence, any two elements that are additive inverses of some $u \in V$ are, in fact, equal. Every element in a vector space has a unique additive inverse.
+```
+
+```{prf:theorem} The Annihilating Scalar
+:label: annihilating-scalar
+
+The additive identity in $V$ decomposes as $0 \cdot v = 0 \in V$ for every $v \in V$.
+```
+
+```{prf:proof}
+:class: dropdown
+
+Take any $v \in V$. Observe,
+
+$$
+0 \cdot v = (0 + 0) \cdot v = 0 \cdot v + 0 \cdot v.
+$$
+
+Since every element in $V$ has an additive inverse, the additive inverse of $0 \cdot v$ can be added to both sides, resulting in the following sum, 
+
+
+$$
+\mathbf{0} = 0 \cdot v
+$$
+
+Hence, $0 \cdot v = 0 \in V$ for every $v \in V$. 
+```
+
+```{prf:theorem} Scaling the Additive Identity
+:label: a-zero-equals-zero
+
+$a \cdot 0  = 0 \in V$ for every $a \in \mathbb{F}$.
+```
+
+```{prf:proof}
+:class: dropdown
+
+Take any $a \in \mathbb{F}$. Observe
+
+$$
+a \cdot 0 = a \cdot (0 + 0) = a \cdot 0 + a \cdot 0.
+$$
+
+Since every element in $V$ has an additive inverse, the additive inverse of $a \cdot 0$ can be added to both sides, resulting in the following sum,
+
+
+$$
+\mathbf{0} = a \cdot 0
+$$
+
+Hence, $a \cdot 0  = 0 \in V$ for every $a \in \mathbb{F}$.
+```
+
+```{prf:theorem} The number (-1) as a Scalar
+:label: minus-one-scalar
+
+$(-1) \cdot v = -v$ for every $v \in V$.
+```
+
+```{prf:proof}
+:class: dropdown
+
+For any $v \in V$, we have 
+
+\begin{align*}
+-v &= -v + \mathbf{0} \\
+&= -v + (0 \cdot v) \\
+&= -v + (1 + (-1)) \cdot v \\
+&= -v + (1 \cdot v + (-1) \cdot v) \\
+&= -v + (v + (-1) \cdot v) \\
+&= (-v + v) + (-1) \cdot v \\
+&= \mathbf{0} + (-1) \cdot v \\
+&= (-1) \cdot v
+\end{align*}
+
+where the first equality holds from {prf:ref}`vector-space`, the second equality holds from {prf:ref}`annihilating-scalar`, the third equality holds by definition of field addition in $\mathbb{F}$, and the fourth and all remaining equalities hold from the repeated application of {prf:ref}`vector-space`.
+
+Hence, $(-1) \cdot v = -v$ for every $v \in V$.
+```
+
+### Subspaces
+
+The concept of subspaces greatly increases the richness and utility of the subject.
+
+```{prf:definition} Subspace
+:label: subspace
+
+A subset $U \subset V$ over $\mathbb{F}$ is called a subspace of $V$ if $U$ is also a vector space over $\mathbb{F}$; the notation $U < V$ is used to signify that the subset $U \subset V$ is, in fact, a subspace of $V$.
+```
+
+The next, very important, result gives an necessary and sufficient condition to check whether a subset of a vector space is, in fact, a subspace.
+
+```{prf:theorem} Necessary + sufficient conditions for a Subspace
+:label: subspace-condition
+
+A subset $U < V$ if and only if $U$ satisfies the following:
+- **Additive Identity:** $0 \in U$;
+- **Closure Under Addition:** $u, w \in U \implies u + w \in U$;
+- **Closure Under Scalar Multiplication:** $u \in U \implies \lambda \cdot u \in U$ for every $\lambda \in \mathbb{F}$.
+```
+
+```{prf:proof}
+:class: dropdown
+We will show both directions of the bidirectional implication,
+
+$(\implies)$
+
+If $U < V$, then the above conditions hold, as required from {prf:ref}`vector-space`.
+
+$(\impliedby)$
+
+To demonstrate the converse, consider any $u, v \in U \subset V$ and scalars $a, b \in \mathbb{F}$. Since $u, v$ are, inherently, elements of $V$, which is a vector space, the following statements are true for the operations of addition and scalar multiplication.
+- **Commutativity:** $u + v = v + u$ for all $u,v \in U$;
+- **Associativity:** $(u + v) + w = u + (v + w)$ and $a (bv) = (ab) v$
+- **Multiplicative Identity:** $1 \cdot v = v$ as expected for $1 \in \mathbf{F}$;
+- **Distributive Properties:** Addition and Scalar Multiplication satisfy the following two relations:
+  - $a (v + u) = av + au \text{ for all } a \in \mathbb{F} \text{ and } u, v \in U,$
+  - $(a + b) v = av + bv \text{ for all } a, b \in \mathbb{F} \text{ and } v \in U.$
+
+Since all the properties of {prf:ref}`vector-space` hold for addition and scalar multiplication restricted to $U$, we have $U < V$, as required.
+```
+
+Given the previous result, it is easy to verify that each of the following are subspaces.
+
+```{prf:example} Examples of subspaces
+:label: subspace-examples
+
+- The set of continuous real-vaued functions on the interval $[0, 1]$ is a subspace of all functions $\mathbb{R}^{[0,1]}$.
+- The set of differentiable real-valued functions on $\mathbb{R}^{}$ is a subspace of $\mathbb{R}^{\mathbb{R}^{}}$.
+- The set of differentiable real-valued functions $f$ on the interval $(0, 3)$ such that $f'(2)=b$ is a subspace of $\mathbb{R}^{(0, 3)}$ if and only if $b = 0$.
+- The set of all sequences of complex numbers with limit 0 is a subspace of $\mathbb{C}^{\infty}$.
+
+- If $b \in \mathbb{F}$, then 
+
+$$
+\{(x_1, x_2, x_3, x_4) \in \mathbb{F}^{4} : x_3 = 5x_4 + b\}
+$$
+
+is a subspace of $\mathbb{F}^{4}$ if and only if $b=0.$
+```
+
+The subspaces of $\mathbb{R}^{2}$ are $\{0\}, \mathbb{R}^{2}$ and all lines that pass through the origin. The subspaces of $\mathbb{R}^{3}$ are $\{0\}, \mathbb{R}^{3}$, and all lines and planes that pass through the origin. To prove all these objects are indeed subspaces is easy; to show they are the only subspaces requires tools which are introduced in later sections.
+
+The notion of the sums of subspaces and direct sums will be useful.
+
+```{prf:definition} Sum of Subsets
+:label: subspace
+
+Suppose $\U_1, \ldots, \U_m \subset \V$. The \textbf{sum} of $\U_1, \ldots, \U_m$, denoted $\U_1 + \cdots + \U_m$, is the set of all possible sums of elements of $\U_1, \ldots, \U_m$. More precisely,
+$U_1 + \cdots + \U_m := \{u_1 + \cdots + u_m \in \V : u_1 \in \U_1, \ldots, u_m \in \U_m \}$
+```
+
+
+```{prf:example} Sum of Subspaces
+:label: subspace-examples
+
+
+Let $U < \mathbb{F}^{3}$ be the subspace of all elements whose second and third coordinates equal $0$ and $W \subset \mathbb{F}^{3}$ be the set of all elements whose first and third coordinates equal $0$:
+
+$$
+U=\{(x, 0, 0) \in \mathbb{F}^{3} : x \in \mathbb{F}^{}\} \text{ and } W = \{(0, x, 0) \in \mathbb{F}^{3} : x \in \mathbb{F}^{}\}
+$$
+
+Then,
+
+$$
+U+W = \{(x, y, 0) \in \mathbb{F}^{3} : x, y \in \mathbb{F}\}
+$$
+
+\example{Sum of Subspaces}
+{
+Let 
+
+
+$$
+U = \{(x,x,y,y)\in \mathbb{F}^{4}: x, y \in \mathbb{F}\}\text{ and }W = \{(x,x,x,y) \in \mathbb{F}^{4}: x, y \in \mathbb{F}\}
+$$
+
+Then,
+
+$$
+U+W = \{(x, x, y, z) \in \mathbb{F}^{4} : x, y, z \in \mathbb{F}\}
+$$
+}
+\vspace{10 pt}
+
+\theorem{Sum of subspaces is the smallest containing subspace}
+{Suppose $\U_1, \ldots, \U_m$ are subspaces of $\V$. Then $\U_1 + \cdots + \U_m$ is the smallest subspace containing $\U_1, \ldots, \U_m$.}
+{}
+
+\subsubsection{Direct Sums}
+Consider any $\mathbf{u}$ in $\U_1 + \cdots + \U_m$. By definition, $\exists u_1 \in \U_1, \ldots, \exists u_m \in \U_m$ such that:
+\mathdiv{\mathbf{u} = u_1 + \cdots + u_m}
+In all kinds of settings, it is ideal to work with sums of subspaces where each $\mathbf{u}$ in $\U_1 + \cdots + \U_m$ can be written as a unique combination of elements. The situation is so important that we give it a special name: \textbf{direct sum}.
+
+\definition{Direct Sum}
+{
+Suppose $\U_1, \ldots, \U_m$ are subspaces of $\V$.
+\points
+{The sum $\U_1 + \cdots + \U_m$ is called a \textbf{direct sum} if each element of $\U_1 + \cdots + \U_m$ can be written in only one way as a sum $\u_1 + \cdots + \u_m$, where each $\u_j$ is in $\U_j$.}
+{If $\U_1 + \cdots + \U_m$ is a direct sum, then $\U_1 \oplus \cdots \oplus \U_m$ denotes $\U_1 + \cdots + \U_m$ with the notiation $\oplus$ denoting the set is a direct sum.}
+}
+
+\example{Natural Basis}
+{
+Suppose $U_j \subset \mathbb{F}^{n}$ is the subspace whose coordinates are all zero, except at coordinate $j$. Hence $U_2 = \{(0,x,0, \ldots, 0) \in \mathbb{F}^{n}: x \in \mathbb{F}^{}\}$. Then 
+\mathdiv{\mathbb{F}^{n} = U_1 + \cdots + U_n}
+}
+
+\example{Not a direct sum}
+{
+Let \begin{align*}
+U_1 &= \{(x,y,0) \in \mathbb{F}^{3} : x, y \in \mathbb{F}^{}\}, \\
+U_2 &= \{(0,0,z) \in \mathbb{F}^{3} : z \in \mathbb{F}^{}\}, \\
+U_3 &= \{(0,y,y) \in \mathbb{F}^{3} : y \in \mathbb{F}^{}\} 
+\end{align*}
+Notice $(0, 0, 0) \in U_1, U_2, U_3$. \\
+Also notice \begin{align*}
+&(0, 1, 0) \in U_1 \\
+&(0,0,1) \in U_2 \\ 
+&(0, -1, -1) \in U_3.
+\end{align*}
+Because $(0,0,0)$ can be written in two different ways as the sum of elements in $U_1, U_2, U_3$,
+\mathdiv{(0,0,0) = (0,0,0) + (0,0,0) + (0,0,0) = (0, 1, 0) + (0,0,1) + (0,-1,-1),}
+the sum $U_1 + U_2 + U_3$ is not a direct sum.
+}
+
+
+\theorem{Conditions for a direct sum}
+{Suppose $\U_1, \ldots, \U_m$ are subspaces of $\V$. Then $\U_1 + \cdots + \U_m$ is a direct sum if and only if the only way to write 0 as a sum of $\u_1 + \cdots + \u_m$, where each $\u_j \in \U_j$ is by taking each $\u_j$ equal to 0.}
+{}
+
+\theorem{Conditions for a direct sum}
+{Suppose $\U$ and $\W$ are subspaces of $\V$. Then $\U + \W$ is a direct sum if and only if $\U \cap \W = \{0\}$}
+{}
 
 ### Span & Linear Independence
 
