@@ -6,26 +6,28 @@ root: index
 options:  # The options key will be applied to all chapters, but not sub-sections
   numbered: True
 parts:
-- caption: Abstract Algebra
+- caption: Part I
   chapters:
   - file: chapters/algebra/symmetry
   - file: chapters/algebra/linear_maps
   - file: chapters/algebra/invariant_subspaces
   - file: chapters/algebra/inner_product_spaces
   - file: chapters/algebra/product_quotient_spaces
-  - file: chapters/algebra/topological_spaces
   - file: chapters/algebra/representations
-  - file: chapters/algebra/fourier_analysis
-  - file: chapters/algebra/probability
+
   - file: chapters/algebra/exercises
 
-- caption: Artificial Neural Networks
+- caption: Part II
   chapters:
-  - file: chapters/learning/explainability
-  - file: chapters/learning/learning_theory
-  - file: chapters/learning/unsupervised_learning
-  - file: chapters/learning/neural_networks
-  - file: chapters/learning/neuroevolution
+  - file: chapters/learning/learning_theory_optimization
   - file: chapters/learning/universal_approximation
-  - file: chapters/learning/equivariant_neural_networks
-  - file: chapters/learning/geometric_graphs.md
+  - file: chapters/learning/group_equivariant_neural_networks
+  - file: chapters/learning/steerable_neural_networks
+  - file: chapters/learning/geometric_graphs
+
+
+- caption: Appendix
+  chapters:
+  - file: chapters/appendix/topological_spaces
+  - file: chapters/appendix/probability
+  - file: chapters/appendix/fourier_analysis

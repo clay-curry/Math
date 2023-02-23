@@ -1,4 +1,4 @@
-# Learning Theory
+# Learning Theory & Optimization
 
 ## Hume's Problem of Induction
 

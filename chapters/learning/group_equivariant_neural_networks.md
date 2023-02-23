@@ -1,4 +1,4 @@
-# Equivariant Neural Networks
+# Group Equivariant Neural Networks
 
 ## Homogenous G-Spaces
 

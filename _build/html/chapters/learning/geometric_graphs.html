@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Graph Neural Networks for Geometric Graphs &#8212; At the Interface of Algebra and Neural Networks</title>
+    <title>Geometric Graph Neural Networks &#8212; At the Interface of Algebra and Neural Networks</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -53,7 +53,8 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="prev" title="Equivariant Neural Networks" href="equivariant_neural_networks.html" />
+    <link rel="next" title="Topological Spaces" href="../appendix/topological_spaces.html" />
+    <link rel="prev" title="Steerable Neural Networks" href="steerable_neural_networks.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -109,13 +110,13 @@ const thebe_selector_output = ".output, .cell_output"
         <ul class="nav bd-sidenav bd-sidenav__home-link">
             <li class="toctree-l1">
                 <a class="reference internal" href="../../index.html">
-                    Introduction
+                    Preface
                 </a>
             </li>
         </ul>
         <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
-  Abstract Algebra
+  Part I
  </span>
 </p>
 <ul class="nav bd-sidenav">
@@ -145,23 +146,8 @@ const thebe_selector_output = ".output, .cell_output"
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../algebra/topological_spaces.html">
-   Topological Spaces
-  </a>
- </li>
- <li class="toctree-l1">
   <a class="reference internal" href="../algebra/representations.html">
    Linear Representations
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../algebra/fourier_analysis.html">
-   Fourier Analysis
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../algebra/probability.html">
-   Probability Distributions
   </a>
  </li>
  <li class="toctree-l1">
@@ -172,33 +158,13 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
-  Artificial Neural Networks
+  Part II
  </span>
 </p>
 <ul class="current nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="explainability.html">
-   The Difficult Problem
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="learning_theory.html">
-   Learning Theory
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="unsupervised_learning.html">
-   Learning without a Teacher
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="neural_networks.html">
-   Neural Networks
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="neuroevolution.html">
-   Neuroevolution
+  <a class="reference internal" href="learning_theory_optimization.html">
+   Learning Theory &amp; Optimization
   </a>
  </li>
  <li class="toctree-l1">
@@ -207,13 +173,40 @@ const thebe_selector_output = ".output, .cell_output"
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="equivariant_neural_networks.html">
-   Equivariant Neural Networks
+  <a class="reference internal" href="group_equivariant_neural_networks.html">
+   Group Equivariant Neural Networks
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="steerable_neural_networks.html">
+   Steerable Neural Networks
   </a>
  </li>
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
-   Graph Neural Networks for Geometric Graphs
+   Geometric Graph Neural Networks
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Appendix
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../appendix/topological_spaces.html">
+   Topological Spaces
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../appendix/probability.html">
+   Probability Distributions
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../appendix/fourier_analysis.html">
+   Fourier Analysis
   </a>
  </li>
 </ul>
@@ -349,15 +342,15 @@ title="Print to PDF"
     <nav id="bd-toc-nav" aria-label="Page">
         <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#geometric-graphs">
-   Geometric Graphs
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#background">
    Background
   </a>
   <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#geometric-graphs">
+     Geometric Graphs
+    </a>
+   </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#graph-isomorphism">
      Graph Isomorphism
@@ -374,21 +367,48 @@ title="Print to PDF"
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#geometric-graph-neural-networks">
-     Geometric Graph Neural Networks
+    <a class="reference internal nav-link" href="#the-geometric-weisfeiler-lehman-isomorphism-test">
+     The Geometric Weisfeiler-Lehman Isomorphism Test
     </a>
    </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#universality-and-discrimination">
-   Universality and Discrimination
+  <a class="reference internal nav-link" href="#architectures">
+   Architectures
   </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#the-geometric-weisfeiler-lehman-isomorphism-test">
-   The Geometric Weisfeiler-Lehman Isomorphism Test
-  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#schnet">
+     SchNet
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#dimenet">
+     DimeNet
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#e-n-equivariant-gnn">
+     E(n) Equivariant GNN
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#gvp-gnn">
+     GVP-GNN
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#tensor-field-network">
+     Tensor Field Network
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#mace-higher-order-equivariant-message-passing-neural-networks-for-fast-and-accurate-force-fields">
+     MACE: Higher Order Equivariant Message Passing Neural Networks for Fast and Accurate Force Fields
+    </a>
+   </li>
+  </ul>
  </li>
 </ul>
 
@@ -399,7 +419,7 @@ title="Print to PDF"
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Graph Neural Networks for Geometric Graphs</h1>
+                <h1>Geometric Graph Neural Networks</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -410,15 +430,15 @@ title="Print to PDF"
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#geometric-graphs">
-   Geometric Graphs
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#background">
    Background
   </a>
   <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#geometric-graphs">
+     Geometric Graphs
+    </a>
+   </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#graph-isomorphism">
      Graph Isomorphism
@@ -435,21 +455,48 @@ title="Print to PDF"
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#geometric-graph-neural-networks">
-     Geometric Graph Neural Networks
+    <a class="reference internal nav-link" href="#the-geometric-weisfeiler-lehman-isomorphism-test">
+     The Geometric Weisfeiler-Lehman Isomorphism Test
     </a>
    </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#universality-and-discrimination">
-   Universality and Discrimination
+  <a class="reference internal nav-link" href="#architectures">
+   Architectures
   </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#the-geometric-weisfeiler-lehman-isomorphism-test">
-   The Geometric Weisfeiler-Lehman Isomorphism Test
-  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#schnet">
+     SchNet
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#dimenet">
+     DimeNet
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#e-n-equivariant-gnn">
+     E(n) Equivariant GNN
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#gvp-gnn">
+     GVP-GNN
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#tensor-field-network">
+     Tensor Field Network
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#mace-higher-order-equivariant-message-passing-neural-networks-for-fast-and-accurate-force-fields">
+     MACE: Higher Order Equivariant Message Passing Neural Networks for Fast and Accurate Force Fields
+    </a>
+   </li>
+  </ul>
  </li>
 </ul>
 
@@ -461,13 +508,13 @@ title="Print to PDF"
                 
               <div>
                 
-  <section class="tex2jax_ignore mathjax_ignore" id="graph-neural-networks-for-geometric-graphs">
-<h1>Graph Neural Networks for Geometric Graphs<a class="headerlink" href="#graph-neural-networks-for-geometric-graphs" title="Permalink to this headline">#</a></h1>
-<section id="geometric-graphs">
-<h2>Geometric Graphs<a class="headerlink" href="#geometric-graphs" title="Permalink to this headline">#</a></h2>
-</section>
+  <section class="tex2jax_ignore mathjax_ignore" id="geometric-graph-neural-networks">
+<h1>Geometric Graph Neural Networks<a class="headerlink" href="#geometric-graph-neural-networks" title="Permalink to this headline">#</a></h1>
 <section id="background">
 <h2>Background<a class="headerlink" href="#background" title="Permalink to this headline">#</a></h2>
+<section id="geometric-graphs">
+<h3>Geometric Graphs<a class="headerlink" href="#geometric-graphs" title="Permalink to this headline">#</a></h3>
+</section>
 <section id="graph-isomorphism">
 <h3>Graph Isomorphism<a class="headerlink" href="#graph-isomorphism" title="Permalink to this headline">#</a></h3>
 </section>
@@ -477,15 +524,31 @@ title="Print to PDF"
 <section id="isomorphic-geometric-graphics">
 <h3>Isomorphic Geometric Graphics<a class="headerlink" href="#isomorphic-geometric-graphics" title="Permalink to this headline">#</a></h3>
 </section>
-<section id="geometric-graph-neural-networks">
-<h3>Geometric Graph Neural Networks<a class="headerlink" href="#geometric-graph-neural-networks" title="Permalink to this headline">#</a></h3>
-</section>
-</section>
-<section id="universality-and-discrimination">
-<h2>Universality and Discrimination<a class="headerlink" href="#universality-and-discrimination" title="Permalink to this headline">#</a></h2>
-</section>
 <section id="the-geometric-weisfeiler-lehman-isomorphism-test">
-<h2>The Geometric Weisfeiler-Lehman Isomorphism Test<a class="headerlink" href="#the-geometric-weisfeiler-lehman-isomorphism-test" title="Permalink to this headline">#</a></h2>
+<h3>The Geometric Weisfeiler-Lehman Isomorphism Test<a class="headerlink" href="#the-geometric-weisfeiler-lehman-isomorphism-test" title="Permalink to this headline">#</a></h3>
+</section>
+</section>
+<hr class="docutils" />
+<section id="architectures">
+<h2>Architectures<a class="headerlink" href="#architectures" title="Permalink to this headline">#</a></h2>
+<section id="schnet">
+<h3>SchNet<a class="headerlink" href="#schnet" title="Permalink to this headline">#</a></h3>
+</section>
+<section id="dimenet">
+<h3>DimeNet<a class="headerlink" href="#dimenet" title="Permalink to this headline">#</a></h3>
+</section>
+<section id="e-n-equivariant-gnn">
+<h3>E(n) Equivariant GNN<a class="headerlink" href="#e-n-equivariant-gnn" title="Permalink to this headline">#</a></h3>
+</section>
+<section id="gvp-gnn">
+<h3>GVP-GNN<a class="headerlink" href="#gvp-gnn" title="Permalink to this headline">#</a></h3>
+</section>
+<section id="tensor-field-network">
+<h3>Tensor Field Network<a class="headerlink" href="#tensor-field-network" title="Permalink to this headline">#</a></h3>
+</section>
+<section id="mace-higher-order-equivariant-message-passing-neural-networks-for-fast-and-accurate-force-fields">
+<h3>MACE: Higher Order Equivariant Message Passing Neural Networks for Fast and Accurate Force Fields<a class="headerlink" href="#mace-higher-order-equivariant-message-passing-neural-networks-for-fast-and-accurate-force-fields" title="Permalink to this headline">#</a></h3>
+</section>
 </section>
 </section>
 
@@ -516,12 +579,19 @@ title="Print to PDF"
                 
     <!-- Previous / next buttons -->
 <div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="equivariant_neural_networks.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="steerable_neural_networks.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Equivariant Neural Networks</p>
+            <p class="prev-next-title">Steerable Neural Networks</p>
         </div>
+    </a>
+    <a class='right-next' id="next-link" href="../appendix/topological_spaces.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Topological Spaces</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
     </a>
 </div>
             </footer>
