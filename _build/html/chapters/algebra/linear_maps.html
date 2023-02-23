@@ -408,6 +408,11 @@ title="Print to PDF"
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#direct-sum">
+     direct sum
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#span-linear-independence">
      Span &amp; Linear Independence
     </a>
@@ -463,6 +468,11 @@ title="Print to PDF"
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#subspaces">
      Subspaces
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#direct-sum">
+     direct sum
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
@@ -545,10 +555,6 @@ Moreover, for any given field <span class="math notranslate nohighlight">\(\math
 \]</div>
 <p>to each scalar-vector pair, <span class="math notranslate nohighlight">\((\lambda, a) \in \mathbb{F} \times V\)</span>. In other words, if a map <span class="math notranslate nohighlight">\(f : V \to W\)</span> is a linear mapping, then we are implicitly assuming that <span class="math notranslate nohighlight">\(V\)</span> has a well-defined summation structure <span class="math notranslate nohighlight">\(+_V : V \times V \to V\)</span> and scalar-multiplication structure <span class="math notranslate nohighlight">\(\cdot_V : \mathbb \times V \to V\)</span> compatible with <span class="math notranslate nohighlight">\(f\)</span>. Likewise, by assuming the existence of a linear map <span class="math notranslate nohighlight">\(f: V \to W\)</span>, we also require the existence of a summation structure <span class="math notranslate nohighlight">\(+_W : W \times W \to W\)</span> and a scalar multiplication structure <span class="math notranslate nohighlight">\(\cdot_W : \mathbb{F} \times W \to W\)</span> so that <span class="math notranslate nohighlight">\(f\)</span> may satisfy the additivity and homogeneity structure defined in <a class="reference internal" href="#linear-map">Axiom 1</a>. Thus, if one wishes to build a solid theory of linear maps, we are motivated first to consider what types of <em>sets</em> linear maps can be well-defined over.
 Distilling fundamental properties of addition and scalar multiplication, we define vector spaces as follows,</p>
-<aside class="margin sidebar">
-<p class="sidebar-title"></p>
-<p>Since elements of a vector space relate under some scalar multiplication structure, which itself depends on the choice of <span class="math notranslate nohighlight">\(\mathbb{F}\)</span>, the phrase “<span class="math notranslate nohighlight">\(V\)</span> is a vector space over <span class="math notranslate nohighlight">\(\mathbb{F}\)</span>” indicates that <span class="math notranslate nohighlight">\(V\)</span> is a vector space and, for the situation at hand, the choice of scalar field is <span class="math notranslate nohighlight">\(\mathbb{F}\)</span>.</p>
-</aside>
 <div class="proof axiom admonition" id="vector-space">
 <p class="admonition-title"><span class="caption-number">Axiom 2 </span> (Vector Space)</p>
 <section class="axiom-content" id="proof-content">
@@ -594,7 +600,11 @@ Distilling fundamental properties of addition and scalar multiplication, we defi
 <div class="amsmath math notranslate nohighlight">
 \[\begin{gather*} a (v + w) = (av) + (aw) \end{gather*}\]</div>
 </section>
-</div><p>With this definition, we can view linear maps as constituting a class of morphisms between two <em>vector spaces</em> with compatible summation and scalar multiplication structures over the same field <span class="math notranslate nohighlight">\(\mathbb{F}\)</span>.</p>
+</div><aside class="margin sidebar">
+<p class="sidebar-title"></p>
+<p>Since elements of a vector space relate under some scalar multiplication structure, which itself depends on the choice of <span class="math notranslate nohighlight">\(\mathbb{F}\)</span>, the phrase “<span class="math notranslate nohighlight">\(V\)</span> is a vector space over <span class="math notranslate nohighlight">\(\mathbb{F}\)</span>” indicates that <span class="math notranslate nohighlight">\(V\)</span> is a vector space and, for the situation at hand, the choice of scalar field is <span class="math notranslate nohighlight">\(\mathbb{F}\)</span>.</p>
+</aside>
+<p>With this definition, we can view linear maps as constituting a class of morphisms between two <em>vector spaces</em> with compatible summation and scalar multiplication structures over the same field <span class="math notranslate nohighlight">\(\mathbb{F}\)</span>.</p>
 <p>In practice, the scalar field <span class="math notranslate nohighlight">\(\mathbb{F}\)</span> will either be the scalar field <span class="math notranslate nohighlight">\(\mathbb{R}\)</span> of real numbers or the scalar field <span class="math notranslate nohighlight">\(\mathbb{C}\)</span> of complex numbers. For brevity, we will make the following two definitions,</p>
 <div class="proof definition admonition" id="real-complex-vector-space">
 <p class="admonition-title"><span class="caption-number">Definition 2 </span> (Real Vector Space, Complex Vector Space)</p>
@@ -602,28 +612,27 @@ Distilling fundamental properties of addition and scalar multiplication, we defi
 <p>A vector space over <span class="math notranslate nohighlight">\(\mathbb{R}\)</span> is called a <strong>real vector space</strong>.</p>
 <p>A vector space over <span class="math notranslate nohighlight">\(\mathbb{C}\)</span> is called a <strong>complex vector space</strong>.</p>
 </section>
-</div><p>The following geometric language is defined for convenience of thinking. <em>Linear algebra</em> focuses on the <em><strong>algebraic</strong></em> structure of vector spaces; intuition depending greatly on geometric insight should be avoided when invoked at the expense algebraic insight.</p>
-<div class="proof definition admonition" id="vector-point">
-<p class="admonition-title"><span class="caption-number">Definition 3 </span> (Vector, Point)</p>
-<section class="definition-content" id="proof-content">
-<p>Elements of a vector space are called <strong>vectors</strong> or <strong>points</strong>.</p>
-</section>
 </div><aside class="margin sidebar">
 <p class="sidebar-title"></p>
 <p>Common geometric notions  like <code class="docutils literal notranslate"><span class="pre">angle</span></code>, <code class="docutils literal notranslate"><span class="pre">orientation</span></code>, and <code class="docutils literal notranslate"><span class="pre">distance</span></code> between points and vectors (unless we consider a vector space with an <em>inner product structure</em>)  do not have any obvious meaning in abstract vector spaces.</p>
 <p><em>Inner product spaces</em> will be a later topic of discussion.</p>
 </aside>
-<p>The following operation is defined for convenience of thinking and proof-writing. It does not ordain a set with any additional structure beyond what is already defined by its parent operation.</p>
-<p>There are many more examples of vector spaces than <span class="math notranslate nohighlight">\(\mathbb{F}^n\)</span>, which are described extensively in the literature.</p>
+<p>The following geometric language is defined for convenience of thinking. <em>Linear algebra</em> focuses on the <em><strong>algebraic</strong></em> structure of vector spaces; intuition depending greatly on geometric insight should be avoided when invoked at the expense algebraic insight.</p>
+<div class="proof definition admonition" id="vector-point">
+<p class="admonition-title"><span class="caption-number">Definition 3 </span> (Vector, Point)</p>
+<section class="definition-content" id="proof-content">
+<p>Elements of a vector space are called <strong>vectors</strong> or <strong>points</strong>.</p>
+</section>
+</div><p>There are many more examples of vector spaces than <span class="math notranslate nohighlight">\(\mathbb{F}^n\)</span>, which are described extensively in the literature.</p>
 <div class="proof example admonition" id="set-vector-space">
 <p class="admonition-title"><span class="caption-number">Example 1 </span> (<span class="math notranslate nohighlight">\(\mathbb{F}^S\)</span>)</p>
 <section class="example-content" id="proof-content">
-<p>If <span class="math notranslate nohighlight">\(S\)</span> is any set, then <span class="math notranslate nohighlight">\(\mathbb{F}^S\)</span> denotes the set of functions <span class="math notranslate nohighlight">\(\{ f : f : S \mathbb{R}^ightarrow \mathbb{F}\}\)</span>. For <span class="math notranslate nohighlight">\(f, g \in \mathbb{F}^S\)</span>, addition and scalar multiplication are defined by:</p>
+<p>If <span class="math notranslate nohighlight">\(S\)</span> is any set, then <span class="math notranslate nohighlight">\(\mathbb{F}^S\)</span> denotes the set of functions <span class="math notranslate nohighlight">\(\{ f : f : S \to \mathbb{F}\}\)</span> where addition and scalar multiplication of elements in <span class="math notranslate nohighlight">\(\mathbb{F}^S\)</span> are defined by the equalities:</p>
 <ul class="simple">
 <li><p><span class="math notranslate nohighlight">\((f+g)(x) = f(x) + g(x)\)</span>    for all <span class="math notranslate nohighlight">\(x \in S\)</span>.</p></li>
 <li><p><span class="math notranslate nohighlight">\((\lambda \cdot f)(x) = \lambda \cdot f(x)\)</span>   for all <span class="math notranslate nohighlight">\(x \in S\)</span>.</p></li>
 </ul>
-<p>It is easy to verify that <span class="math notranslate nohighlight">\(\mathbb{F}^S\)</span> is a vector space.</p>
+<p>for <span class="math notranslate nohighlight">\(f, g \in \mathbb{F}^S\)</span>. It is easy to verify that <span class="math notranslate nohighlight">\(\mathbb{F}^S\)</span> is a vector space.</p>
 </section>
 </div><p>The following theorems hold for all vector spaces.</p>
 <div class="proof theorem admonition" id="unique-additive-identity">
@@ -770,6 +779,105 @@ a \cdot 0 = a \cdot (0 + 0) = a \cdot 0 + a \cdot 0.
 \]</div>
 <p>is a subspace of <span class="math notranslate nohighlight">\(\mathbb{F}^{4}\)</span> if and only if <span class="math notranslate nohighlight">\(b=0.\)</span></p>
 </section>
+</div><p>The subspaces of <span class="math notranslate nohighlight">\(\mathbb{R}^{2}\)</span> are <span class="math notranslate nohighlight">\(\{0\}, \mathbb{R}^{2}\)</span> and all lines that pass through the origin. The subspaces of <span class="math notranslate nohighlight">\(\mathbb{R}^{3}\)</span> are <span class="math notranslate nohighlight">\(\{0\}, \mathbb{R}^{3}\)</span>, and all lines and planes that pass through the origin. To prove all these objects are indeed subspaces is easy; to show they are the only subspaces requires tools which are introduced in later sections.</p>
+<p>The notion of the sums of subspaces and direct sums will be useful.</p>
+<div class="proof definition admonition" id="subspace-sum">
+<p class="admonition-title"><span class="caption-number">Definition 5 </span> (Sum of Subsets)</p>
+<section class="definition-content" id="proof-content">
+<p>Suppose <span class="math notranslate nohighlight">\(U_1, \ldots, U_m \subset V\)</span> . The <strong>sum</strong> of <span class="math notranslate nohighlight">\(U_1, \ldots, U_m\)</span>, denoted <span class="math notranslate nohighlight">\(U_1 + \cdots + U_m\)</span>, is the set of all possible sums of elements of <span class="math notranslate nohighlight">\(U_1, \ldots, U_m\)</span>. More precisely,
+<span class="math notranslate nohighlight">\(U_1 + \cdots + U_m := \{u_1 + \cdots + u_m \in V : u_1 \in U_1, \ldots, u_m \in U_m \}\)</span></p>
+</section>
+</div><div class="proof example admonition" id="example-14">
+<p class="admonition-title"><span class="caption-number">Example 3 </span> (Sum of Subspaces)</p>
+<section class="example-content" id="proof-content">
+<p>Let <span class="math notranslate nohighlight">\(U &lt; \mathbb{F}^{3}\)</span> be the subspace of all elements whose second and third coordinates equal <span class="math notranslate nohighlight">\(0\)</span> and <span class="math notranslate nohighlight">\(W \subset \mathbb{F}^{3}\)</span> be the set of all elements whose first and third coordinates equal <span class="math notranslate nohighlight">\(0\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[
+U=\{(x, 0, 0) \in \mathbb{F}^{3} : x \in \mathbb{F}^{}\} \text{ and } W = \{(0, x, 0) \in \mathbb{F}^{3} : x \in \mathbb{F}^{}\}
+\]</div>
+<p>Then,</p>
+<div class="math notranslate nohighlight">
+\[
+U+W = \{(x, y, 0) \in \mathbb{F}^{3} : x, y \in \mathbb{F}\}
+\]</div>
+</section>
+</div><div class="proof example admonition" id="example-15">
+<p class="admonition-title"><span class="caption-number">Example 4 </span> (Sum of Subspaces)</p>
+<section class="example-content" id="proof-content">
+<p>Let</p>
+<div class="math notranslate nohighlight">
+\[
+U = \{(x,x,y,y)\in \mathbb{F}^{4}: x, y \in \mathbb{F}\}\text{ and }W = \{(x,x,x,y) \in \mathbb{F}^{4}: x, y \in \mathbb{F}\}
+\]</div>
+<p>Then,</p>
+<div class="math notranslate nohighlight">
+\[
+U+W = \{(x, x, y, z) \in \mathbb{F}^{4} : x, y, z \in \mathbb{F}\}
+\]</div>
+<p>}</p>
+</section>
+</div><div class="proof theorem admonition" id="theorem-16">
+<p class="admonition-title"><span class="caption-number">Theorem 7 </span> (Sum of subspaces is the smallest containing subspace)</p>
+<section class="theorem-content" id="proof-content">
+<p>Suppose <span class="math notranslate nohighlight">\(U_1, \ldots, U_m\)</span> are subspaces of <span class="math notranslate nohighlight">\(V\)</span> . Then <span class="math notranslate nohighlight">\(U_1 + \cdots + U_m\)</span> is the smallest subspace containing <span class="math notranslate nohighlight">\(U_1, \ldots, U_m\)</span>.</p>
+</section>
+</div></section>
+<section id="direct-sum">
+<h3>direct sum<a class="headerlink" href="#direct-sum" title="Permalink to this headline">#</a></h3>
+<p>Recall that every <span class="math notranslate nohighlight">\(\mathbf{u}\)</span> in <span class="math notranslate nohighlight">\(U_1 + \cdots + U_m\)</span> can be decomposed into a sum of elements with <span class="math notranslate nohighlight">\(u_1 \in U_1, \ldots, u_m \in U_m\)</span> such that <span class="math notranslate nohighlight">\(\mathbf{u}\)</span>, i.e.,</p>
+<div class="math notranslate nohighlight">
+\[
+\mathbf{u} = u_1 + \cdots + u_m
+\]</div>
+<p>In many settings, it is ideal to work with sums of subspaces where each <span class="math notranslate nohighlight">\(\mathbf{u}\)</span> in <span class="math notranslate nohighlight">\(U_1 + \cdots + U_m\)</span> can be written as a unique combination of elements. The situation is so important that we give it a special name: <strong>direct sum</strong>.</p>
+<div class="proof definition admonition" id="definition-17">
+<p class="admonition-title"><span class="caption-number">Definition 6 </span> (Direct Sum)</p>
+<section class="definition-content" id="proof-content">
+<p>Suppose <span class="math notranslate nohighlight">\(U_1, \ldots, U_m\)</span> are subspaces of <span class="math notranslate nohighlight">\(V\)</span>.</p>
+<ul class="simple">
+<li><p>The sum <span class="math notranslate nohighlight">\(U_1 + \cdots + U_m\)</span> is called a <strong>direct sum</strong> if each element of <span class="math notranslate nohighlight">\(U_1 + \cdots + U_m\)</span> can be written in only one way as a sum <span class="math notranslate nohighlight">\(U_1 + \cdots + U_m\)</span>, where each <span class="math notranslate nohighlight">\(U_j\)</span> is in <span class="math notranslate nohighlight">\(U_j\)</span>.</p></li>
+<li><p>If <span class="math notranslate nohighlight">\(U_1 + \cdots + U_m\)</span> is a direct sum, then <span class="math notranslate nohighlight">\(U_1 \oplus \cdots \oplus U_m\)</span> denotes <span class="math notranslate nohighlight">\(U_1 + \cdots + U_m\)</span> with the notiation <span class="math notranslate nohighlight">\(\oplus\)</span> denoting the set is a direct sum.</p></li>
+</ul>
+</section>
+</div><div class="proof example admonition" id="example-18">
+<p class="admonition-title"><span class="caption-number">Example 5 </span> (Natural Basis)</p>
+<section class="example-content" id="proof-content">
+<p>Suppose <span class="math notranslate nohighlight">\(U_j \subset \mathbb{F}^{n}\)</span> is the subspace whose coordinates are all zero, except at coordinate <span class="math notranslate nohighlight">\(j\)</span>. Hence <span class="math notranslate nohighlight">\(U_2 = \{(0,x,0, \ldots, 0) \in \mathbb{F}^{n}: x \in \mathbb{F}^{}\}\)</span>. Then
+\mathdiv{\mathbb{F}^{n} = U_1 + \cdots + U_n}</p>
+</section>
+</div><div class="proof example admonition" id="example-19">
+<p class="admonition-title"><span class="caption-number">Example 6 </span> (Sums that are not direct)</p>
+<section class="example-content" id="proof-content">
+<p>Let</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
+U_1 &amp;= \{(x,y,0) \in \mathbb{F}^{3} : x, y \in \mathbb{F}^{}\}, \\
+U_2 &amp;= \{(0,0,z) \in \mathbb{F}^{3} : z \in \mathbb{F}^{}\}, \\
+U_3 &amp;= \{(0,y,y) \in \mathbb{F}^{3} : y \in \mathbb{F}^{}\} 
+\end{align*}\]</div>
+<p>Notice <span class="math notranslate nohighlight">\((0, 0, 0) \in U_1, U_2, U_3\)</span>. \
+Also notice \begin{align*}
+&amp;(0, 1, 0) \in U_1 \
+&amp;(0,0,1) \in U_2 \
+&amp;(0, -1, -1) \in U_3.
+\end{align*}
+Because <span class="math notranslate nohighlight">\((0,0,0)\)</span> can be written in two different ways as the sum of elements in <span class="math notranslate nohighlight">\(U_1, U_2, U_3\)</span>,</p>
+<div class="math notranslate nohighlight">
+\[
+(0,0,0) = (0,0,0) + (0,0,0) + (0,0,0) = (0, 1, 0) + (0,0,1) + (0,-1,-1),
+\]</div>
+<p>the sum <span class="math notranslate nohighlight">\(U_1 + U_2 + U_3\)</span> is not a direct sum.</p>
+</section>
+</div><div class="proof theorem admonition" id="check-direct-sum">
+<p class="admonition-title"><span class="caption-number">Theorem 8 </span> (Conditions for a direct sum)</p>
+<section class="theorem-content" id="proof-content">
+<p>Suppose <span class="math notranslate nohighlight">\(U_1, \ldots, U_m\)</span> are subspaces of <span class="math notranslate nohighlight">\(V\)</span> . Then <span class="math notranslate nohighlight">\(U_1 + \cdots + U_m\)</span> is a direct sum if and only if the only way to write 0 as a sum of <span class="math notranslate nohighlight">\(U_1 + \cdots + U_m\)</span>, where each <span class="math notranslate nohighlight">\(U_j \in U_j\)</span> is by taking each <span class="math notranslate nohighlight">\(U_j\)</span> equal to 0.</p>
+</section>
+</div><div class="proof theorem admonition" id="theorem-21">
+<p class="admonition-title"><span class="caption-number">Theorem 9 </span> (Conditions for a direct sum)</p>
+<section class="theorem-content" id="proof-content">
+<p>Suppose <span class="math notranslate nohighlight">\(U\)</span> and <span class="math notranslate nohighlight">\(W\)</span>  are subspaces of <span class="math notranslate nohighlight">\(V\)</span> . Then <span class="math notranslate nohighlight">\(U + W\)</span>  is a direct sum if and only if <span class="math notranslate nohighlight">\(U \cap W = \{0\}\)</span></p>
+</section>
 </div></section>
 <section id="span-linear-independence">
 <h3>Span &amp; Linear Independence<a class="headerlink" href="#span-linear-independence" title="Permalink to this headline">#</a></h3>
@@ -812,7 +920,7 @@ f(a_1 v_1 + \cdots + a_n v_n) = a_1 f(v_1) + \cdots + a_n f(v_n)
             mode: "python"
         },
         kernelOptions: {
-            kernelName: "python3",
+            name: "python3",
             path: "./chapters/algebra"
         },
         predefinedOutput: true
