@@ -12,9 +12,7 @@
 
 ### The Geometric Weisfeiler-Lehman Isomorphism Test
 
----
-
-## Architectures
+## Literature Survey
 
 ### SchNet
 

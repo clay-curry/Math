@@ -15,6 +15,13 @@ kernelspec:
 
 # Linear Maps
 
+As we saw in the previous chapter, the profoundness of group theory in the history of mathematics and physics directly stems from the following truth:
+
+<div style="text-align:center;">
+<b>groups</b> are a <b>formal language</b> for describing <b>symmetries</b>.</div>
+<br>
+
+
 Linear algebra is the study of linear maps on finite-dimensional vector spaces. Vector spaces are defined in this chapter, and their basic properties are developed.
 
 The central goal of linear algebra is to:

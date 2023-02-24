@@ -112,13 +112,13 @@ const thebe_selector_output = ".output, .cell_output"
         <ul class="nav bd-sidenav bd-sidenav__home-link">
             <li class="toctree-l1">
                 <a class="reference internal" href="../../index.html">
-                    Introduction
+                    Preface
                 </a>
             </li>
         </ul>
         <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
-  Abstract Algebra
+  Part I
  </span>
 </p>
 <ul class="current nav bd-sidenav">
@@ -148,23 +148,18 @@ const thebe_selector_output = ".output, .cell_output"
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="topological_spaces.html">
-   Topological Spaces
-  </a>
- </li>
- <li class="toctree-l1">
   <a class="reference internal" href="representations.html">
    Linear Representations
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="fourier_analysis.html">
-   Fourier Analysis
+  <a class="reference internal" href="clebsch_gordan.html">
+   Clebsch-Gordan Theory
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="probability.html">
-   Probability Distributions
+  <a class="reference internal" href="wigner_eckart.html">
+   Wigner-Eckart Theorem
   </a>
  </li>
  <li class="toctree-l1">
@@ -175,33 +170,13 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
-  Artificial Neural Networks
+  Part II
  </span>
 </p>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="../learning/explainability.html">
-   The Difficult Problem
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../learning/learning_theory.html">
-   Learning Theory
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../learning/unsupervised_learning.html">
-   Learning without a Teacher
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../learning/neural_networks.html">
-   Neural Networks
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../learning/neuroevolution.html">
-   Neuroevolution
+  <a class="reference internal" href="../learning/learning_theory_optimization.html">
+   Learning Theory &amp; Optimization
   </a>
  </li>
  <li class="toctree-l1">
@@ -210,13 +185,40 @@ const thebe_selector_output = ".output, .cell_output"
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../learning/equivariant_neural_networks.html">
-   Equivariant Neural Networks
+  <a class="reference internal" href="../learning/group_equivariant_neural_networks.html">
+   Group Equivariant Neural Networks
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../learning/steerable_neural_networks.html">
+   Steerable Neural Networks
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../learning/geometric_graphs.html">
-   Graph Neural Networks for Geometric Graphs
+   Geometric Graph Neural Networks
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Appendix
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../appendix/topological_spaces.html">
+   Topological Spaces
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../appendix/probability.html">
+   Probability Distributions
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../appendix/fourier_analysis.html">
+   Fourier Analysis
   </a>
  </li>
 </ul>
@@ -278,7 +280,7 @@ title="Toggle navigation"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/chapters/algebra/linear_maps.md"
+        <a href="https://mybinder.org/v2/gh/claycurry34/Math/master?urlpath=tree/chapters/algebra/linear_maps.md"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -312,6 +314,19 @@ title="Fullscreen mode"
   </span>
 
 </button>
+<a href="https://github.com/claycurry34/Math"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="bottom"
+title="Source repository"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+
+</a>
 
 <div class="menu-dropdown menu-dropdown-download-buttons">
   <button class="headerbtn menu-dropdown__trigger"
@@ -516,6 +531,10 @@ title="Print to PDF"
                 
   <section class="tex2jax_ignore mathjax_ignore" id="linear-maps">
 <h1>Linear Maps<a class="headerlink" href="#linear-maps" title="Permalink to this headline">#</a></h1>
+<p>As we saw in the previous chapter, the profoundness of group theory in the history of mathematics and physics directly stems from the following truth:</p>
+<div style="text-align:center;">
+<b>groups</b> are a <b>formal language</b> for describing <b>symmetries</b>.</div>
+<br>
 <p>Linear algebra is the study of linear maps on finite-dimensional vector spaces. Vector spaces are defined in this chapter, and their basic properties are developed.</p>
 <p>The central goal of linear algebra is to:</p>
 <ol class="simple">
@@ -627,7 +646,7 @@ Distilling fundamental properties of addition and scalar multiplication, we defi
 <div class="proof example admonition" id="set-vector-space">
 <p class="admonition-title"><span class="caption-number">Example 1 </span> (<span class="math notranslate nohighlight">\(\mathbb{F}^S\)</span>)</p>
 <section class="example-content" id="proof-content">
-<p>If <span class="math notranslate nohighlight">\(S\)</span> is any set, then <span class="math notranslate nohighlight">\(\mathbb{F}^S\)</span> denotes the set of functions <span class="math notranslate nohighlight">\(\{ f : f : S \to \mathbb{F}\}\)</span> where addition and scalar multiplication of elements in <span class="math notranslate nohighlight">\(\mathbb{F}^S\)</span> are defined by the equalities:</p>
+<p>If <span class="math notranslate nohighlight">\(S\)</span> is any set, then <span class="math notranslate nohighlight">\(\mathbb{F}^S\)</span> denotes the set of functions <span class="math notranslate nohighlight">\(\{ f : f : S \to \mathbb{F}\}\)</span> where addition and scalar multiplication of elements in <span class="math notranslate nohighlight">\(\mathbb{F}^S\)</span> are defined by equalities:</p>
 <ul class="simple">
 <li><p><span class="math notranslate nohighlight">\((f+g)(x) = f(x) + g(x)\)</span>    for all <span class="math notranslate nohighlight">\(x \in S\)</span>.</p></li>
 <li><p><span class="math notranslate nohighlight">\((\lambda \cdot f)(x) = \lambda \cdot f(x)\)</span>   for all <span class="math notranslate nohighlight">\(x \in S\)</span>.</p></li>

@@ -53,8 +53,8 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Fourier Analysis" href="fourier_analysis.html" />
-    <link rel="prev" title="Topological Spaces" href="topological_spaces.html" />
+    <link rel="next" title="Clebsch-Gordan Theory" href="clebsch_gordan.html" />
+    <link rel="prev" title="Product &amp; Quotient Spaces" href="product_quotient_spaces.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -110,13 +110,13 @@ const thebe_selector_output = ".output, .cell_output"
         <ul class="nav bd-sidenav bd-sidenav__home-link">
             <li class="toctree-l1">
                 <a class="reference internal" href="../../index.html">
-                    Introduction
+                    Preface
                 </a>
             </li>
         </ul>
         <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
-  Abstract Algebra
+  Part I
  </span>
 </p>
 <ul class="current nav bd-sidenav">
@@ -145,24 +145,19 @@ const thebe_selector_output = ".output, .cell_output"
    Product &amp; Quotient Spaces
   </a>
  </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="topological_spaces.html">
-   Topological Spaces
-  </a>
- </li>
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
    Linear Representations
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="fourier_analysis.html">
-   Fourier Analysis
+  <a class="reference internal" href="clebsch_gordan.html">
+   Clebsch-Gordan Theory
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="probability.html">
-   Probability Distributions
+  <a class="reference internal" href="wigner_eckart.html">
+   Wigner-Eckart Theorem
   </a>
  </li>
  <li class="toctree-l1">
@@ -173,33 +168,13 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
-  Artificial Neural Networks
+  Part II
  </span>
 </p>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="../learning/explainability.html">
-   The Difficult Problem
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../learning/learning_theory.html">
-   Learning Theory
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../learning/unsupervised_learning.html">
-   Learning without a Teacher
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../learning/neural_networks.html">
-   Neural Networks
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../learning/neuroevolution.html">
-   Neuroevolution
+  <a class="reference internal" href="../learning/learning_theory_optimization.html">
+   Learning Theory &amp; Optimization
   </a>
  </li>
  <li class="toctree-l1">
@@ -208,13 +183,40 @@ const thebe_selector_output = ".output, .cell_output"
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../learning/equivariant_neural_networks.html">
-   Equivariant Neural Networks
+  <a class="reference internal" href="../learning/group_equivariant_neural_networks.html">
+   Group Equivariant Neural Networks
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../learning/steerable_neural_networks.html">
+   Steerable Neural Networks
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../learning/geometric_graphs.html">
-   Graph Neural Networks for Geometric Graphs
+   Geometric Graph Neural Networks
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Appendix
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../appendix/topological_spaces.html">
+   Topological Spaces
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../appendix/probability.html">
+   Probability Distributions
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../appendix/fourier_analysis.html">
+   Fourier Analysis
   </a>
  </li>
 </ul>
@@ -281,6 +283,19 @@ title="Fullscreen mode"
   </span>
 
 </button>
+<a href="https://github.com/claycurry34/Math"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="bottom"
+title="Source repository"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+
+</a>
 
 <div class="menu-dropdown menu-dropdown-download-buttons">
   <button class="headerbtn menu-dropdown__trigger"
@@ -578,17 +593,17 @@ title="Print to PDF"
                 
     <!-- Previous / next buttons -->
 <div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="topological_spaces.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="product_quotient_spaces.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Topological Spaces</p>
+            <p class="prev-next-title">Product &amp; Quotient Spaces</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="fourier_analysis.html" title="next page">
+    <a class='right-next' id="next-link" href="clebsch_gordan.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Fourier Analysis</p>
+        <p class="prev-next-title">Clebsch-Gordan Theory</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>

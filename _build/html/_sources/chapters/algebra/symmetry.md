@@ -1,18 +1,17 @@
 # Symmetry
 
-Forever fused by Newton, the allience of higher mathematics and modern physics have irreversably altered our relationship with the universe. The ultimate goal of both theories, mathematics and physics, is to develop logical and consistent abstract model of the properties of the systems that make up the world. Among the most profound achievements in this endeavor has been the construction of groups and group theory. This feat is a direct consequence of the following truth:
+In the same way ***derivatives*** occupy mathematics to portray the *structure* of **continuous change** in the calculus of infinitesimals, the mathematical theory of ***groups*** provide a microscope for contemplating the *structure* of mathematical objects possessing **symmetry**.
 
-<div style="text-align:center;">
-<b>groups</b> are a <b>formal language</b> for describing <b>symmetries</b>.</div>
-<br>
+Our goal in this chapter is the following:
 
-Much like how ***derivatives*** provide a formal mathematical object to portray the structure of infinitesmal change, ***groups*** are a formal mathematical structure that extend our ability to understand and leverage symmetries.
+- to understand why and how groups provide a microscope for contemplating the *structure* of symmetry,
+- to understand what we truly mean by "symmetry".
 
-Before going forward, our first goal is to motivate the study of groups by revisiting notions of sets, relations, mathematical structure, operations on sets, operators on sets, equivalence relations, and symmetry. This is followed by some basic results proved from the axioms of group theory, cosets, isomorphisms, and group actions.
+We will achieve this goal by revisiting notions of sets, mathematical structure, relations, operations on sets, operators on sets, equivalence relations, and symmetry. This is followed by some basic results proved from the axioms of group theory, cosets, isomorphisms, and group actions.
 
 ## Set Theory
 
-Sets are not merely defined as a collection of elements. Sets are defined by their elements and by the mathematical structure that glues elements together in any meaningful sense (ordering, summation, multiplication, orientation, etc.)
+Sets are not merely defined as a collection of elements; sets are defined by their elements.
 
 ````{prf:definition} Set
 :label: set
@@ -28,16 +27,17 @@ Elements may be any kind of mathematical objects, including numbers, lists of nu
 
 ### Relations
 
-Relations and operations mathematically characterize the various kinds of structures that could exist between mathematical objects.
-Relation can also describe a connection between two elements of different sets. Operations provide a way to discuss and view arbitrary elements by combining or manipulating other elements of a set. Together, these concepts form the foundation of many branches of mathematics and are used to define mathematical objects such as groups, vector spaces, and fields.
-
-### Mathematical Structure
+Much of what we consider interesting in mathematics concerns the fundamental concept of mathematical structure. Though sets are defined by their elements ({prf:ref}`linear-map`), nearly all mathematics is motivated to understand the nature of the kinds of structures (ordering, continuity, distance, summation, multiplication, orientation, etc.) that can exist between elements of a set. Relations are foundational in many branches of mathematics as they provide a universal recipe for describing arbitrary mathematical structure.
 
 ### Operations on Sets
+
+Operations define mathematical objects such as groups, vector spaces, and fields.
 
 ### Operators
 
 ### Equivalence Relations
+
+The notion of "equality," "congruency," "identicality" naturally emerged in the vocabulary of human thought and language, invoked whenever two arbitrary systems $A$ and $B$ share the same "identity."
 
 ### Symmetry
 
