@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Proof Index &#8212; Symmetry, Representations, and Neural Networks</title>
+    <title>Proof Index &#8212; At the Interface of Algebra and Neural Networks</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -102,7 +102,7 @@ const thebe_selector_output = ".output, .cell_output"
       <img src="_static/logo.png" class="logo" alt="logo">
       
       
-      <h1 class="site-logo" id="site-title">Symmetry, Representations, and Neural Networks</h1>
+      <h1 class="site-logo" id="site-title">At the Interface of Algebra and Neural Networks</h1>
       
     </a>
 </div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
@@ -114,13 +114,13 @@ const thebe_selector_output = ".output, .cell_output"
         <ul class="nav bd-sidenav bd-sidenav__home-link">
             <li class="toctree-l1">
                 <a class="reference internal" href="index.html">
-                    Introduction
+                    Preface
                 </a>
             </li>
         </ul>
         <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
-  Abstract Algebra
+  Part I
  </span>
 </p>
 <ul class="nav bd-sidenav">
@@ -150,23 +150,18 @@ const thebe_selector_output = ".output, .cell_output"
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="chapters/algebra/topological_spaces.html">
-   Topological Spaces
-  </a>
- </li>
- <li class="toctree-l1">
   <a class="reference internal" href="chapters/algebra/representations.html">
    Linear Representations
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="chapters/algebra/fourier_analysis.html">
-   Fourier Analysis
+  <a class="reference internal" href="chapters/algebra/clebsch_gordan.html">
+   Clebsch-Gordan Theory
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="chapters/algebra/probability.html">
-   Probability Distributions
+  <a class="reference internal" href="chapters/algebra/wigner_eckart.html">
+   Wigner-Eckart Theorem
   </a>
  </li>
  <li class="toctree-l1">
@@ -177,33 +172,13 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
-  Artificial Neural Networks
+  Part II
  </span>
 </p>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="chapters/learning/explainability.html">
-   The Difficult Problem
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="chapters/learning/learning_theory.html">
-   Learning Theory
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="chapters/learning/unsupervised_learning.html">
-   Learning without a Teacher
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="chapters/learning/neural_networks.html">
-   Neural Networks
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="chapters/learning/neuroevolution.html">
-   Neuroevolution
+  <a class="reference internal" href="chapters/learning/learning_theory_optimization.html">
+   Learning Theory &amp; Optimization
   </a>
  </li>
  <li class="toctree-l1">
@@ -212,13 +187,40 @@ const thebe_selector_output = ".output, .cell_output"
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="chapters/learning/equivariant_neural_networks.html">
-   Equivariant Neural Networks
+  <a class="reference internal" href="chapters/learning/group_equivariant_neural_networks.html">
+   Group Equivariant Neural Networks
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="chapters/learning/steerable_neural_networks.html">
+   Steerable Neural Networks
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="chapters/learning/geometric_graphs.html">
-   Graph Neural Networks for Geometric Graphs
+   Geometric Graph Neural Networks
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Appendix
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="chapters/appendix/topological_spaces.html">
+   Topological Spaces
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="chapters/appendix/probability.html">
+   Probability Distributions
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="chapters/appendix/fourier_analysis.html">
+   Fourier Analysis
   </a>
  </li>
 </ul>
@@ -285,6 +287,19 @@ title="Fullscreen mode"
   </span>
 
 </button>
+<a href="https://github.com/claycurry34/Math"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="bottom"
+title="Source repository"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+
+</a>
 
     </div>
 </div>
@@ -313,12 +328,105 @@ title="Fullscreen mode"
    <h1>Proof Index</h1>
 
    <div class="modindex-jumpbox">
+   <a href="#cap-a-zero-equals-zero"><strong>a-zero-equals-zero</strong></a> | 
+   <a href="#cap-annihilating-scalar"><strong>annihilating-scalar</strong></a> | 
+   <a href="#cap-check-direct-sum"><strong>check-direct-sum</strong></a> | 
+   <a href="#cap-definition-17"><strong>definition-17</strong></a> | 
+   <a href="#cap-example-14"><strong>example-14</strong></a> | 
+   <a href="#cap-example-15"><strong>example-15</strong></a> | 
+   <a href="#cap-example-18"><strong>example-18</strong></a> | 
+   <a href="#cap-example-19"><strong>example-19</strong></a> | 
+   <a href="#cap-linear-comb-map"><strong>linear-comb-map</strong></a> | 
    <a href="#cap-linear-map"><strong>linear-map</strong></a> | 
+   <a href="#cap-minus-one-scalar"><strong>minus-one-scalar</strong></a> | 
+   <a href="#cap-real-complex-vector-space"><strong>real-complex-vector-space</strong></a> | 
    <a href="#cap-set"><strong>set</strong></a> | 
+   <a href="#cap-set-vector-space"><strong>set-vector-space</strong></a> | 
+   <a href="#cap-subspace"><strong>subspace</strong></a> | 
+   <a href="#cap-subspace-condition"><strong>subspace-condition</strong></a> | 
+   <a href="#cap-subspace-examples"><strong>subspace-examples</strong></a> | 
+   <a href="#cap-subspace-sum"><strong>subspace-sum</strong></a> | 
+   <a href="#cap-theorem-16"><strong>theorem-16</strong></a> | 
+   <a href="#cap-theorem-21"><strong>theorem-21</strong></a> | 
+   <a href="#cap-unique-additive-identity"><strong>unique-additive-identity</strong></a> | 
+   <a href="#cap-unique-additive-inverse"><strong>unique-additive-inverse</strong></a> | 
+   <a href="#cap-vector-point"><strong>vector-point</strong></a> | 
    <a href="#cap-vector-space"><strong>vector-space</strong></a>
    </div>
 
    <table class="indextable modindextable">
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-a-zero-equals-zero"><td></td><td>
+       <strong>a-zero-equals-zero</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="chapters/algebra/linear_maps.html#a-zero-equals-zero"><code class="xref">a-zero-equals-zero</code></a> <em>(chapters/algebra/linear_maps)</em></td><td>
+       <em>theorem</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-annihilating-scalar"><td></td><td>
+       <strong>annihilating-scalar</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="chapters/algebra/linear_maps.html#annihilating-scalar"><code class="xref">annihilating-scalar</code></a> <em>(chapters/algebra/linear_maps)</em></td><td>
+       <em>theorem</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-check-direct-sum"><td></td><td>
+       <strong>check-direct-sum</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="chapters/algebra/linear_maps.html#check-direct-sum"><code class="xref">check-direct-sum</code></a> <em>(chapters/algebra/linear_maps)</em></td><td>
+       <em>theorem</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-definition-17"><td></td><td>
+       <strong>definition-17</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="chapters/algebra/linear_maps.html#definition-17"><code class="xref">definition-17</code></a> <em>(chapters/algebra/linear_maps)</em></td><td>
+       <em>definition</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-example-14"><td></td><td>
+       <strong>example-14</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="chapters/algebra/linear_maps.html#example-14"><code class="xref">example-14</code></a> <em>(chapters/algebra/linear_maps)</em></td><td>
+       <em>example</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-example-15"><td></td><td>
+       <strong>example-15</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="chapters/algebra/linear_maps.html#example-15"><code class="xref">example-15</code></a> <em>(chapters/algebra/linear_maps)</em></td><td>
+       <em>example</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-example-18"><td></td><td>
+       <strong>example-18</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="chapters/algebra/linear_maps.html#example-18"><code class="xref">example-18</code></a> <em>(chapters/algebra/linear_maps)</em></td><td>
+       <em>example</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-example-19"><td></td><td>
+       <strong>example-19</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="chapters/algebra/linear_maps.html#example-19"><code class="xref">example-19</code></a> <em>(chapters/algebra/linear_maps)</em></td><td>
+       <em>example</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-linear-comb-map"><td></td><td>
+       <strong>linear-comb-map</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="chapters/algebra/linear_maps.html#linear-comb-map"><code class="xref">linear-comb-map</code></a> <em>(chapters/algebra/linear_maps)</em></td><td>
+       <em>proposition</em></td></tr>
      <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
      <tr class="cap" id="cap-linear-map"><td></td><td>
        <strong>linear-map</strong></td><td></td></tr>
@@ -328,12 +436,108 @@ title="Fullscreen mode"
        <a href="chapters/algebra/linear_maps.html#linear-map"><code class="xref">linear-map</code></a> <em>(chapters/algebra/linear_maps)</em></td><td>
        <em>axiom</em></td></tr>
      <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-minus-one-scalar"><td></td><td>
+       <strong>minus-one-scalar</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="chapters/algebra/linear_maps.html#minus-one-scalar"><code class="xref">minus-one-scalar</code></a> <em>(chapters/algebra/linear_maps)</em></td><td>
+       <em>theorem</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-real-complex-vector-space"><td></td><td>
+       <strong>real-complex-vector-space</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="chapters/algebra/linear_maps.html#real-complex-vector-space"><code class="xref">real-complex-vector-space</code></a> <em>(chapters/algebra/linear_maps)</em></td><td>
+       <em>definition</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
      <tr class="cap" id="cap-set"><td></td><td>
        <strong>set</strong></td><td></td></tr>
      <tr>
        <td></td>
        <td>
        <a href="chapters/algebra/symmetry.html#set"><code class="xref">set</code></a> <em>(chapters/algebra/symmetry)</em></td><td>
+       <em>definition</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-set-vector-space"><td></td><td>
+       <strong>set-vector-space</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="chapters/algebra/linear_maps.html#set-vector-space"><code class="xref">set-vector-space</code></a> <em>(chapters/algebra/linear_maps)</em></td><td>
+       <em>example</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-subspace"><td></td><td>
+       <strong>subspace</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="chapters/algebra/linear_maps.html#subspace"><code class="xref">subspace</code></a> <em>(chapters/algebra/linear_maps)</em></td><td>
+       <em>definition</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-subspace-condition"><td></td><td>
+       <strong>subspace-condition</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="chapters/algebra/linear_maps.html#subspace-condition"><code class="xref">subspace-condition</code></a> <em>(chapters/algebra/linear_maps)</em></td><td>
+       <em>theorem</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-subspace-examples"><td></td><td>
+       <strong>subspace-examples</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="chapters/algebra/linear_maps.html#subspace-examples"><code class="xref">subspace-examples</code></a> <em>(chapters/algebra/linear_maps)</em></td><td>
+       <em>example</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-subspace-sum"><td></td><td>
+       <strong>subspace-sum</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="chapters/algebra/linear_maps.html#subspace-sum"><code class="xref">subspace-sum</code></a> <em>(chapters/algebra/linear_maps)</em></td><td>
+       <em>definition</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-theorem-16"><td></td><td>
+       <strong>theorem-16</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="chapters/algebra/linear_maps.html#theorem-16"><code class="xref">theorem-16</code></a> <em>(chapters/algebra/linear_maps)</em></td><td>
+       <em>theorem</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-theorem-21"><td></td><td>
+       <strong>theorem-21</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="chapters/algebra/linear_maps.html#theorem-21"><code class="xref">theorem-21</code></a> <em>(chapters/algebra/linear_maps)</em></td><td>
+       <em>theorem</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-unique-additive-identity"><td></td><td>
+       <strong>unique-additive-identity</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="chapters/algebra/linear_maps.html#unique-additive-identity"><code class="xref">unique-additive-identity</code></a> <em>(chapters/algebra/linear_maps)</em></td><td>
+       <em>theorem</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-unique-additive-inverse"><td></td><td>
+       <strong>unique-additive-inverse</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="chapters/algebra/linear_maps.html#unique-additive-inverse"><code class="xref">unique-additive-inverse</code></a> <em>(chapters/algebra/linear_maps)</em></td><td>
+       <em>theorem</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-vector-point"><td></td><td>
+       <strong>vector-point</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="chapters/algebra/linear_maps.html#vector-point"><code class="xref">vector-point</code></a> <em>(chapters/algebra/linear_maps)</em></td><td>
        <em>definition</em></td></tr>
      <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
      <tr class="cap" id="cap-vector-space"><td></td><td>

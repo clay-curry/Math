@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Neural Networks &#8212; At the Interface of Algebra and Neural Networks</title>
+    <title>Fourier Analysis &#8212; At the Interface of Algebra and Neural Networks</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -53,6 +53,7 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
+    <link rel="prev" title="Probability Distributions" href="probability.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -144,23 +145,18 @@ const thebe_selector_output = ".output, .cell_output"
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../algebra/topological_spaces.html">
-   Topological Spaces
-  </a>
- </li>
- <li class="toctree-l1">
   <a class="reference internal" href="../algebra/representations.html">
    Linear Representations
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../algebra/fourier_analysis.html">
-   Fourier Analysis
+  <a class="reference internal" href="../algebra/clebsch_gordan.html">
+   Clebsch-Gordan Theory
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../algebra/probability.html">
-   Probability Distributions
+  <a class="reference internal" href="../algebra/wigner_eckart.html">
+   Wigner-Eckart Theorem
   </a>
  </li>
  <li class="toctree-l1">
@@ -176,13 +172,50 @@ const thebe_selector_output = ".output, .cell_output"
 </p>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="universal_approximation.html">
+  <a class="reference internal" href="../learning/learning_theory_optimization.html">
+   Learning Theory &amp; Optimization
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../learning/universal_approximation.html">
    Universal Approximation
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="geometric_graphs.html">
-   Graph Neural Networks for Geometric Graphs
+  <a class="reference internal" href="../learning/group_equivariant_neural_networks.html">
+   Group Equivariant Neural Networks
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../learning/steerable_neural_networks.html">
+   Steerable Neural Networks
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../learning/geometric_graphs.html">
+   Geometric Graph Neural Networks
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Appendix
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="topological_spaces.html">
+   Topological Spaces
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="probability.html">
+   Probability Distributions
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Fourier Analysis
   </a>
  </li>
 </ul>
@@ -249,6 +282,19 @@ title="Fullscreen mode"
   </span>
 
 </button>
+<a href="https://github.com/claycurry34/Math"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="bottom"
+title="Source repository"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+
+</a>
 
 <div class="menu-dropdown menu-dropdown-download-buttons">
   <button class="headerbtn menu-dropdown__trigger"
@@ -258,7 +304,7 @@ title="Fullscreen mode"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="../../_sources/chapters/learning/neural_networks.md"
+        <a href="../../_sources/chapters/appendix/fourier_analysis.md"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -318,18 +364,13 @@ title="Print to PDF"
     <nav id="bd-toc-nav" aria-label="Page">
         <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#rotation-and-squashing">
-   Rotation and Squashing
+  <a class="reference internal nav-link" href="#measure-theory">
+   Measure Theory
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#principal-subspaces">
-   Principal Subspaces
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#gradient-descent-and-momentum">
-   Gradient Descent and Momentum
+  <a class="reference internal nav-link" href="#integration">
+   Integration
   </a>
  </li>
 </ul>
@@ -341,7 +382,7 @@ title="Print to PDF"
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Neural Networks</h1>
+                <h1>Fourier Analysis</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -352,18 +393,13 @@ title="Print to PDF"
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#rotation-and-squashing">
-   Rotation and Squashing
+  <a class="reference internal nav-link" href="#measure-theory">
+   Measure Theory
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#principal-subspaces">
-   Principal Subspaces
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#gradient-descent-and-momentum">
-   Gradient Descent and Momentum
+  <a class="reference internal nav-link" href="#integration">
+   Integration
   </a>
  </li>
 </ul>
@@ -376,16 +412,14 @@ title="Print to PDF"
                 
               <div>
                 
-  <section class="tex2jax_ignore mathjax_ignore" id="neural-networks">
-<h1>Neural Networks<a class="headerlink" href="#neural-networks" title="Permalink to this headline">#</a></h1>
-<section id="rotation-and-squashing">
-<h2>Rotation and Squashing<a class="headerlink" href="#rotation-and-squashing" title="Permalink to this headline">#</a></h2>
+  <section class="tex2jax_ignore mathjax_ignore" id="fourier-analysis">
+<h1>Fourier Analysis<a class="headerlink" href="#fourier-analysis" title="Permalink to this headline">#</a></h1>
+<section id="measure-theory">
+<h2>Measure Theory<a class="headerlink" href="#measure-theory" title="Permalink to this headline">#</a></h2>
 </section>
-<section id="principal-subspaces">
-<h2>Principal Subspaces<a class="headerlink" href="#principal-subspaces" title="Permalink to this headline">#</a></h2>
-</section>
-<section id="gradient-descent-and-momentum">
-<h2>Gradient Descent and Momentum<a class="headerlink" href="#gradient-descent-and-momentum" title="Permalink to this headline">#</a></h2>
+<section id="integration">
+<h2>Integration<a class="headerlink" href="#integration" title="Permalink to this headline">#</a></h2>
+<p>Goal: Provide elementary results concerning real Fourier analysis on groups and emphasize the connection between representations and bases</p>
 </section>
 </section>
 
@@ -402,7 +436,7 @@ title="Print to PDF"
         },
         kernelOptions: {
             name: "python3",
-            path: "./chapters/learning"
+            path: "./chapters/appendix"
         },
         predefinedOutput: true
     }
@@ -416,6 +450,13 @@ title="Print to PDF"
                 
     <!-- Previous / next buttons -->
 <div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="probability.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Probability Distributions</p>
+        </div>
+    </a>
 </div>
             </footer>
         </div>
